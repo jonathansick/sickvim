@@ -78,11 +78,6 @@ nmap <silent><Leader>te <Esc>:Pytest error<CR>
 " Run django tests
 map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
 
-" ,v brings up my .vimrc
-" ,V reloads it -- making all changes active (have to save first)
-map <leader>v :sp ~/.vimrc<CR><C-W>_
-map <silent> <leader>V :source ~/.vimrc<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
-
 " open/close the quickfix window
 nmap <leader>c :copen<CR>
 nmap <leader>cc :cclose<CR>
@@ -276,9 +271,20 @@ if has("gui_macvim")
 " http://ethanschoonover.com/solarized/vim-colors-solarized
 syntax enable
 set background=light
+let g:solarized_contrast = "normal"
+let g:solarized_visibility = "low"
 colorscheme solarized
-g:solarized_contrast = "normal"
-g:solarized_visibility = "low"
+
+" Refine settings for specific filetypes
+if has("autocmd")
+    " Enable file type detection
+    filetype on
+    
+    " auto-wrap prose
+    autocmd FileType text,markdown,html,tex setlocal wrap linebreak nolist
+
+    autocmd FileType gitconfig setlocal ts=4 sts=4 sw=4 noexpandtab
+endif
 
 " Auto-update vim with modified vimrc
 " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
