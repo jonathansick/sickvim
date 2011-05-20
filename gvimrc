@@ -6,7 +6,7 @@ set lines=60
 " Don't show the toolbar
 set guioptions-=T
 
-" Use Menlo 12pt
+" Use Menlo 11pt
 set guifont=Menlo:h11
 
 " Sets the percent transparency

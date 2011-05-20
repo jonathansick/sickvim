@@ -1,5 +1,6 @@
-" https://github.com/sontek/dotfiles/
-" With modifications by Jonathan Sick, jonathansick@mac.com
+" Based on https://github.com/sontek/dotfiles/
+" and influenced by http://amix.dk/vim/vimrc.html
+" tailored to fit by Jonathan Sick, jonathansick@mac.com
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -181,6 +182,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 """" Reading/Writing
 set noautowrite             " Never write a file unless I request it.
 set noautowriteall          " NEVER.
+set noswapfile
+set nobackup
+set nowb
 set noautoread              " Don't automatically re-read changed files.
 set modeline                " Allow vim options to be embedded in files;
 set modelines=5             " they must be within the first or last 5 lines.
@@ -212,6 +216,8 @@ set incsearch               " Incrementally search while typing a /regex
 " ==========================================================
 " Python
 " ==========================================================
+let python_highlight_all = 1 " Supposedly better python syntax
+
 "au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
 au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
@@ -264,6 +270,8 @@ if has("gui_macvim")
 	  let macvim_hig_shift_movement = 1
 	endif
 
+" Jonathan Sick's Major Additions ============================================
+
 " Display, use the Solarized colour scheme,
 " http://ethanschoonover.com/solarized/vim-colors-solarized
 syntax enable
@@ -271,3 +279,12 @@ set background=light
 colorscheme solarized
 g:solarized_contrast = "normal"
 g:solarized_visibility = "low"
+
+" Auto-update vim with modified vimrc
+" http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
+if has("autocmd")
+  autocmd bufwritepost .vimrc source $MYVIMRC
+endif
+" Press ``,vimrc`` to edit vimrc file
+nmap <leader>v :tabedit $MYVIMRC<CR>
+
