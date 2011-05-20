@@ -66,4 +66,7 @@
 	path = bundle/vim-colors-solarized
     url = git://github.com/altercation/vim-colors-solarized.git
     ignore = dirty
-
+[submodule "bundle/pyflakes"]
+	path = bundle/pyflakes
+    url = https://github.com/mitechie/pyflakes-pathogen.git
+    ignore = dirty
