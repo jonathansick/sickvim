@@ -74,4 +74,7 @@
 	path = bundle/latexsuite
 	url = https://github.com/vim-scripts/LaTeX-Suite-aka-Vim-LaTeX.git
 	ignore = dirty
-
+[submodule "bundle/markdown"]
+	path = bundle/markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+	ignore = dirty
