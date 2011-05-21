@@ -76,5 +76,5 @@
 	ignore = dirty
 [submodule "bundle/markdown"]
 	path = bundle/markdown
-	url = https://github.com/plasticboy/vim-markdown.git
+	url = https://github.com/hallison/vim-markdown.git
 	ignore = dirty
