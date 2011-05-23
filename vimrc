@@ -292,5 +292,5 @@ if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 " Press ``,vimrc`` to edit vimrc file
-nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>vimrc :tabedit $MYVIMRC<CR>
 
