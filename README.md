@@ -32,7 +32,7 @@ Installation
 
 This project can be cloned as your .vim directory and the relevant dotfiles are linked into the home directory.
 
-1. git clone ... ~/.vim
+1. git clone git://github.com/jonathansick/sickvim.git ~/.vim
 2. ln -s ~/.vim/vimrc ~/.vimrc
 3. ln -s ~/.vim/gvimrc ~/.gvimrc
 4. git submodule update --init
@@ -52,7 +52,7 @@ In the ~/.vim/.gitmodules, it is useful add the line
 
     ignore = dirty
 
-to each submodule. This prevents help tag generation from creating the illusion of the plugins changing. See [Nils Haldenwang's blog for details.][dirty].
+to each submodule. This prevents help tag generation from creating the illusion of the plugins changing. See [Nils Haldenwang's blog for details.][dirty]
 
 [home]: http://www.jonathansick.ca
 [anderson]: http://sontek.net/turning-vim-into-a-modern-python-ide
