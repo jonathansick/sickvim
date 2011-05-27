@@ -48,7 +48,7 @@ Additional plugins can be installed via the procedure
 1. `git submodule add bundle_url ~/.vim/bundle/yourbundlename`
 2. `git submodule init`
 
-In the ~/.vim/.gitmodules, it is useful add the line
+In  `~/.vim/.gitmodules`, it is useful add the line
 
     ignore = dirty
 
