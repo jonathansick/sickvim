@@ -1,7 +1,7 @@
 Jonathan Sick's Vim Configuration
 =================================
 
-My vim configuration is derived from work by [John Anderson][anderson]. As also described in [a vimcast][submodulevimcast], plugins are installed as git submodules with [Pathogen][].
+My vim configuration is derived from work by [John Anderson][anderson]. As described in [a vimcast][submodulevimcast], plugins are installed as git submodules with [Pathogen][].
 
 Features
 --------
@@ -30,23 +30,23 @@ These plugins are currently installed (my additions from Anderson's basic Python
 Installation
 ------------
 
-This project can be cloned as your .vim directory and the relevant dotfiles are linked into the home directory.
+This project can be cloned as your `~.vim` directory and the relevant dotfiles are linked into the home directory.
 
-1. git clone git://github.com/jonathansick/sickvim.git ~/.vim
-2. ln -s ~/.vim/vimrc ~/.vimrc
-3. ln -s ~/.vim/gvimrc ~/.gvimrc
-4. git submodule update --init
-5. cd ~/.vim/bundle/command-t; rake make
+1. `git clone git://github.com/jonathansick/sickvim.git ~/.vim`
+2. `ln -s ~/.vim/vimrc ~/.vimrc`
+3. `ln -s ~/.vim/gvimrc ~/.gvimrc`
+4. `git submodule update --init`
+5. `cd ~/.vim/bundle/command-t; rake make`
 
-Since plugins are submodules, they can be updating by issuing `git pull` within their respective directories in `bundle/`.
+Since plugins are submodules, they can be updated by issuing `git pull` within their respective directories in `bundle/`.
 
 Adding plugins
 --------------
 
 Additional plugins can be installed via the procedure
 
-1. git submodule add url ~/.vim/bundle/command-t
-2. git submodule init
+1. `git submodule add bundle_url ~/.vim/bundle/yourbundlename`
+2. `git submodule init`
 
 In the ~/.vim/.gitmodules, it is useful add the line
 
