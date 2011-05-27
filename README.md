@@ -38,13 +38,28 @@ This project can be cloned as your .vim directory and the relevant dotfiles are 
 4. git submodule update --init
 5. cd ~/.vim/bundle/command-t; rake make
 
-Since plugins are submodules, they can be updating by issuing `git pull` within their respective directories in `bundle/`. 
+Since plugins are submodules, they can be updating by issuing `git pull` within their respective directories in `bundle/`.
 
+Adding plugins
+--------------
+
+Additional plugins can be installed via the procedure
+
+1. git submodule add url ~/.vim/bundle/command-t
+2. git submodule init
+
+In the ~/.vim/.gitmodules, it is useful add the line
+
+    ignore = dirty
+
+to each submodule. This prevents help tag generation from creating the illusion of the plugins changing. See [Nils Haldenwang's blog for details.][dirty].
 
 [home]: http://www.jonathansick.ca
 [anderson]: http://sontek.net/turning-vim-into-a-modern-python-ide
-    Turning Vim into a Modern Python IDE
+    "Turning Vim into a Modern Python IDE"
 [submodulevimcast]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
-    Synchronizing plugins with git submodules and pathogen
+    "Synchronizing plugins with git submodules and pathogen"
 [Pathogen]: https://github.com/tpope/vim-pathogen
 [Solarized]: http://ethanschoonover.com/solarized/vim-colors-solarized
+[dirty]: http://www.nils-haldenwang.de/frameworks-and-tools/git/how-to-ignore-changes-in-git-submodules
+    "How to ignore changes in git submodules"
