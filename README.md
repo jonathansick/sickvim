@@ -25,7 +25,7 @@ These plugins are currently installed (my additions from Anderson's basic Python
 * NERDTree &mdash; file system explorer, like TextMate's drawer
 * Markdown &mdash; markdown syntax highlighting
 * cython &mdash; pyrex and Cython syntax highlighting
-* latexsuite &mdash; LaTeX IDE
+* latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
 
 Installation
 ------------
@@ -39,6 +39,10 @@ This project can be cloned as your `~.vim` directory and the relevant dotfiles a
 5. `cd ~/.vim/bundle/command-t; rake make`
 
 Since plugins are submodules, they can be updated by issuing `git pull` within their respective directories in `bundle/`.
+
+Plugins can be updated in bulk using the command:
+
+    git submodule foreach git pull
 
 Adding plugins
 --------------
