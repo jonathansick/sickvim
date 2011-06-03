@@ -278,9 +278,8 @@ colorscheme solarized
 " === LaTeX, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/recommended-settings.html
 let g:tex_flavor='latex'
-" TIP: if you write your \label's as \label{fig:something}, then if you
-" type in \ref{fig: and press <C-n> you will automatically cycle through
-" all the figure labels. Very useful!
+map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
+		\ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p"
 
 
 " Refine settings for specific filetypes
