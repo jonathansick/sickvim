@@ -70,10 +70,6 @@
 	path = bundle/pyflakes
 	url = https://github.com/mitechie/pyflakes-pathogen.git
 	ignore = dirty
-[submodule "bundle/markdown"]
-	path = bundle/markdown
-	url = https://github.com/hallison/vim-markdown.git
-	ignore = dirty
 [submodule "bundle/latex-box"]
 	path = bundle/latex-box
 	url = https://github.com/vim-scripts/LaTeX-Box.git
