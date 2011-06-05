@@ -327,3 +327,10 @@ function! LoadTemplate()
 endfunction
 autocmd! BufNewFile * call LoadTemplate()
 
+" === Spellcheck
+
+if v:version > 700
+    set spell 
+    setlocal spell spelllang=en_us
+endif
+
