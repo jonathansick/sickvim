@@ -304,6 +304,8 @@ nmap <leader>vimrc :tabedit $MYVIMRC<CR>
 
 " Dan Foreman-Mackey's Additions =============================================
 
+let g:snips_author=$MYNAME     " automatically insert your name (from bashrc)
+
 " End of line behaviour
 set ww=<,>,[,],h,l,b,s,~
 

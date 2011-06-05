@@ -1,6 +1,6 @@
 " what a funny comment character
 
-" Number of horizontal lines on teh screen
+" Number of horizontal lines on the screen
 set lines=60
 
 " Don't show the toolbar
