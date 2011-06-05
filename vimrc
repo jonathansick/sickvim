@@ -321,6 +321,7 @@ vnoremap <Down> j
 function! LoadTemplate()
     silent! 0r ~/.vim/skel/tmpl.%:e
     silent! %s/%DATE%/\=strftime("%b %d, %Y")/g
+    silent! %s/%AUTHOR%/\=$MYNAME/g
     silent! %s/%FILENAME%/\=expand("%:t")/g
     silent! %s/%START%//g
 endfunction

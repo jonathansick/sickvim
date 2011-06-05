@@ -3,7 +3,7 @@
 """
 %FILENAME%
 
-Created by Dan Foreman-Mackey on %DATE%
+Created by %AUTHOR% on %DATE%
 """
 
 import numpy as np
