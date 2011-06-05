@@ -127,7 +127,7 @@ filetype on                   " try to detect filetypes
 filetype plugin indent on     " enable loading indent file for filetype
 set number                    " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
-set background=dark           " We are using dark background in vim
+"set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
@@ -300,4 +300,27 @@ if has("autocmd")
 endif
 " Press ``,vimrc`` to edit vimrc file
 nmap <leader>vimrc :tabedit $MYVIMRC<CR>
+
+
+" Dan Foreman-Mackey's Additions =============================================
+
+" End of line behaviour
+set ww=<,>,[,],h,l,b,s,~
+
+" Make it so that the arrow keys don't kill visual mode
+vnoremap <Left> h
+vnoremap <Right> l
+vnoremap <Up> k
+vnoremap <Down> j
+
+" === File templates
+" http://tumblr.com/xuz29tkj6a
+
+function! LoadTemplate()
+    silent! 0r ~/.vim/skel/tmpl.%:e
+    silent! %s/%DATE%/\=strftime("%b %d, %Y")/g
+    silent! %s/%FILENAME%/\=expand("%:t")/g
+    silent! %s/%START%//g
+endfunction
+autocmd! BufNewFile * call LoadTemplate()
 
