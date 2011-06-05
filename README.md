@@ -49,7 +49,8 @@ If you don't have them, you'll also need to install the dependencies.
 1. Pep8 &mdash; `sudo easy_install pep8`
 2. PyFlakes &mdash; `sudo easy_install pyflakes`
 3. Ack &mdash; e.g. `sudo brew install ack` (using [Homebrew][homebrew])
-4. ...
+4. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
+5. ...
 
 Adding plugins
 --------------
