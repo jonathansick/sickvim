@@ -26,6 +26,7 @@ These plugins are currently installed (my additions from Anderson's basic Python
 * Markdown &mdash; markdown syntax highlighting
 * cython &mdash; pyrex and Cython syntax highlighting
 * latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
+* TagList &mdash; list and jump between functions in your source using CTags
 
 Installation
 ------------
@@ -37,6 +38,7 @@ This project can be cloned as your `~.vim` directory and the relevant dotfiles a
 3. `ln -s ~/.vim/gvimrc ~/.gvimrc`
 4. `git submodule update --init`
 5. `cd ~/.vim/bundle/command-t; rake make`
+6. `cd ~/.vim/doc/; vim` then run `:helptags .`
 
 Since plugins are submodules, they can be updated by issuing `git pull` within their respective directories in `bundle/`.
 

@@ -334,3 +334,7 @@ if v:version > 700
     setlocal spell spelllang=en_us
 endif
 
+" === Taglist
+
+map <leader>t :TlistToggle<CR>
+
