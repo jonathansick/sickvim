@@ -337,4 +337,6 @@ endif
 " === Taglist
 
 map <leader>t :TlistToggle<CR>
+let Tlist_Auto_Open = 1                        " automatically open taglist
+let Tlist_Use_Right_Window = 1                 " only open taglist on the right
 
