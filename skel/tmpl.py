@@ -6,6 +6,8 @@
 Created by %AUTHOR% on %DATE%
 """
 
+__all__ = ['']
+
 import numpy as np
 import pylab as pl
 

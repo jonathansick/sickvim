@@ -12,3 +12,49 @@ snippet doc
 	HISTORY:
 	    Created by ${5:`g:snips_author`} on `system("date '+%b %d, %Y'")`
 	"""
+snippet doc2
+	"""
+	${1:Purpose}
+	
+	${2:Description}.
+	
+	Parameters
+	----------
+	${3:param} : ${4:type}
+	    ${5:Description}
+	
+	Returns
+	-------
+	${6:ret} : ${7:type}
+	    ${8:Description}
+	
+	Raises
+	------
+	${9:Exception} :
+	    ${10:Why?}
+	
+	See Also
+	--------
+	${11:module} :
+	    ${12:Description}
+	
+	Notes
+	-----
+	${13:Comments}
+
+	References
+	----------
+	${14}
+	
+	Examples
+	--------
+	${14:>>> my_function()}
+
+	History
+	-------
+	Created by ${15:`g:snips_author`} on `system("date '+%b %d, %Y'")`
+	
+	"""
+snippet docpar
+	${1} : ${2}
+	    ${3:Description}
