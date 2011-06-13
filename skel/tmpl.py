@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # encoding: utf-8
 """
-%FILENAME%
+%START%
 
-Created by %AUTHOR% on %DATE%
+History
+-------
+Created by %AUTHOR% on %DATE%.
+
 """
 
 __all__ = ['']
@@ -13,7 +16,7 @@ import pylab as pl
 
 
 def main():
-    %START%
+    pass
 
 if __name__ == '__main__':
     main()
