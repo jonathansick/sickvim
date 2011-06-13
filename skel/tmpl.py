@@ -5,7 +5,7 @@
 
 History
 -------
-Created by %AUTHOR% on %DATE%.
+%DATE% - Created by %AUTHOR%
 
 """
 
