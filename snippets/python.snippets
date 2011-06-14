@@ -16,47 +16,26 @@ snippet doc2
 	"""
 	${1:Purpose}
 	
-	${2:Description}.
-	
 	Parameters
 	----------
-	${3:param} : ${4:type}
-	    ${5:Description}
+	${2:param} : ${3:type}
+	    ${4:Description}
 	
 	Returns
 	-------
-	${6:ret} : ${7:type}
-	    ${8:Description}
+	${5:ret} : ${6:type}
+	    ${7:Description}
 	
-	Raises
-	------
-	${9:Exception} :
-	    ${10:Why?}
-	
-	See Also
-	--------
-	${11:module} :
-	    ${12:Description}
-	
-	Notes
-	-----
-	${13:Comments}
-
-	References
-	----------
-	${14}
-	
-	Examples
-	--------
-	```python
-	${14:>>> my_function()}
-	```
-
 	History
 	-------
 	`system("date '+%Y-%m-%d'")` - Created by ${15:`g:snips_author`}
 	
 	"""
+snippet example
+	Examples
+	--------
+	${14:>>> my_function()}
+	
 snippet docpar
 	${1} : ${2}
 	    ${3:Description}
