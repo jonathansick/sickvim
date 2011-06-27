@@ -6,5 +6,17 @@ bindkey -d ^? stuff ^H
 bindkey -d ^@ stuff ^H
 
 # autoset window name
+#
+# **** ADD THIS TO .bashrc:
+# case $TERM in
+#     screen*)
+#         SCREENTITLE='\[\ek\e\\\]\[\ek\W\e\\\]'
+#         ;;
+#     *)
+#         SCREENTITLE=''
+#         ;;
+# esac
+# export PS1="${SCREENTITLE}[\u@\h \W]\$ "
+#
 shelltitle "$ |bash"
 

@@ -127,7 +127,7 @@ filetype on                   " try to detect filetypes
 filetype plugin indent on     " enable loading indent file for filetype
 set number                    " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
-"set background=dark           " We are using dark background in vim
+set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
@@ -150,7 +150,7 @@ set pumheight=6             " Keep a small completion window
 endif
 
 """ Moving Around/Editing
-set cursorline              " have a line indicate the cursor location
+"set cursorline              " have a line indicate the cursor location
 set ruler                   " show the cursor position all the time
 set nostartofline           " Avoid moving cursor to BOL when jumping around
 set virtualedit=block       " Let cursor move past the last char in <C-v> mode
@@ -270,7 +270,7 @@ if has("gui_macvim")
 " Display, use the Solarized colour scheme,
 " http://ethanschoonover.com/solarized/vim-colors-solarized
 syntax enable
-set background=light
+"set background=light
 let g:solarized_contrast = "normal"
 let g:solarized_visibility = "low"
 colorscheme solarized
