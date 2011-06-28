@@ -1,7 +1,7 @@
 " Based on https://github.com/sontek/dotfiles/
 " and influenced by http://amix.dk/vim/vimrc.html
 " tailored to fit by Jonathan Sick, jonathansick@mac.com
-" ==========================================================
+" =========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
 " Pep8 - http://pypi.python.org/pypi/pep8
@@ -127,7 +127,6 @@ filetype on                   " try to detect filetypes
 filetype plugin indent on     " enable loading indent file for filetype
 set number                    " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
-set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
@@ -262,25 +261,30 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " Mac-like shift+movement selection
 if has("gui_macvim")
-	  let macvim_hig_shift_movement = 1
-	endif
+	let macvim_hig_shift_movement = 1
+endif
 
 " Jonathan Sick's Major Additions ============================================
 
 " Display, use the Solarized colour scheme,
 " http://ethanschoonover.com/solarized/vim-colors-solarized
-syntax enable
-"set background=light
-let g:solarized_contrast = "normal"
-let g:solarized_visibility = "low"
-colorscheme solarized
+if has('gui_running')
+    syntax enable
+    set background=light
+    let g:solarized_termtrans=1
+    "let g:solarized_contrast = "normal"
+    "let g:solarized_visibility = "low"
+    colorscheme solarized
+else
+    set background=light
+    "colorscheme impact
+endif
 
 " === LaTeX, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/recommended-settings.html
 let g:tex_flavor='latex'
 map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
 		\ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p"
-
 
 " Refine settings for specific filetypes
 if has("autocmd")
@@ -329,7 +333,7 @@ autocmd! BufNewFile * call LoadTemplate()
 
 " === Spellcheck
 
-if v:version > 700
+if v:version > 700 && has('gui_running')
     set spell 
     setlocal spell spelllang=en_us
 endif
