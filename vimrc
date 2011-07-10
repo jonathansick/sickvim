@@ -278,6 +278,12 @@ colorscheme solarized
 " === LaTeX, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/recommended-settings.html
 let g:tex_flavor='latex'
+" See http://www.phys.psu.edu/~collins/software/latexmk-jcc/ for latex
+" options. I use:
+" -f force latexmk to continue a compilation with errors
+" -bibtex-cond regenerates bbl only if the bibtex file can be found
+" -pdf uses pdflatex
+let g:LatexBox_latexmk_options="-f -pdf -bibtex-cond"
 map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
 		\ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p"
 
