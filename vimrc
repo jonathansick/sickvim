@@ -1,7 +1,7 @@
 " Based on https://github.com/sontek/dotfiles/
 " and influenced by http://amix.dk/vim/vimrc.html
 " tailored to fit by Jonathan Sick, jonathansick@mac.com
-" ==========================================================
+" =========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
 " Pep8 - http://pypi.python.org/pypi/pep8
@@ -127,7 +127,6 @@ filetype on                   " try to detect filetypes
 filetype plugin indent on     " enable loading indent file for filetype
 set number                    " Display line numbers
 set numberwidth=1             " using only 1 column (and 1 space) while possible
-set background=dark           " We are using dark background in vim
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
@@ -150,7 +149,7 @@ set pumheight=6             " Keep a small completion window
 endif
 
 """ Moving Around/Editing
-set cursorline              " have a line indicate the cursor location
+"set cursorline              " have a line indicate the cursor location
 set ruler                   " show the cursor position all the time
 set nostartofline           " Avoid moving cursor to BOL when jumping around
 set virtualedit=block       " Let cursor move past the last char in <C-v> mode
@@ -262,18 +261,24 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " Mac-like shift+movement selection
 if has("gui_macvim")
-	  let macvim_hig_shift_movement = 1
-	endif
+	let macvim_hig_shift_movement = 1
+endif
 
 " Jonathan Sick's Major Additions ============================================
 
 " Display, use the Solarized colour scheme,
 " http://ethanschoonover.com/solarized/vim-colors-solarized
-syntax enable
-set background=light
-let g:solarized_contrast = "normal"
-let g:solarized_visibility = "low"
-colorscheme solarized
+if has('gui_running')
+    syntax enable
+    set background=light
+    let g:solarized_termtrans=1
+    "let g:solarized_contrast = "normal"
+    "let g:solarized_visibility = "low"
+    colorscheme solarized
+else
+    set background=light
+    "colorscheme impact
+endif
 
 " === LaTeX, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/recommended-settings.html
@@ -286,7 +291,6 @@ let g:tex_flavor='latex'
 let g:LatexBox_latexmk_options="-f -pdf -bibtex-cond"
 map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
 		\ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p"
-
 
 " Refine settings for specific filetypes
 if has("autocmd")
@@ -306,4 +310,46 @@ if has("autocmd")
 endif
 " Press ``,vimrc`` to edit vimrc file
 nmap <leader>vimrc :tabedit $MYVIMRC<CR>
+
+
+" Dan Foreman-Mackey's Additions =============================================
+
+let g:snips_author=$MYNAME     " automatically insert your name (from bashrc)
+
+" End of line behaviour
+set ww=<,>,[,],h,l,b,s,~
+
+" Make it so that the arrow keys don't kill visual mode
+vnoremap <Left> h
+vnoremap <Right> l
+vnoremap <Up> k
+vnoremap <Down> j
+
+" === File templates
+" http://tumblr.com/xuz29tkj6a
+
+function! LoadTemplate()
+    silent! 0r ~/.vim/skel/tmpl.%:e
+    silent! %s/%DATE%/\=strftime("%Y-%m-%d")/g
+    silent! %s/%AUTHOR%/\=$MYNAME/g
+    silent! %s/%FILENAME%/\=expand("%:t")/g
+    silent! %s/%START%//g
+endfunction
+autocmd! BufNewFile * call LoadTemplate()
+
+" === Spellcheck
+
+if v:version > 700 && has('gui_running')
+    set spell 
+    setlocal spell spelllang=en_us
+endif
+
+" === Ctags/Taglist
+
+" map <leader>t :TlistToggle<CR>
+nmap ,t :!(cd %:p:h;ctags *)<CR>        " rebuild tag index
+set tags=./tags,tags                    " configure Ctags to use global project tags
+let Tlist_Auto_Open = 1                 " automatically open taglist
+let Tlist_Use_Right_Window = 1          " only open taglist on the right
+let Tlist_Exit_OnlyWindow = 1           " automatically close taglist when we close the window
 
