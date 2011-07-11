@@ -270,13 +270,13 @@ endif
 " http://ethanschoonover.com/solarized/vim-colors-solarized
 if has('gui_running')
     syntax enable
-    set background=light
+    set background=dark
     let g:solarized_termtrans=1
     "let g:solarized_contrast = "normal"
     "let g:solarized_visibility = "low"
     colorscheme solarized
 else
-    set background=light
+    set background=dark
     "colorscheme impact
 endif
 
