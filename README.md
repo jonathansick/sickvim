@@ -52,7 +52,7 @@ If you don't have them, you'll also need to install the dependencies.
 2. PyFlakes &mdash; `sudo easy_install pyflakes`
 3. Ack &mdash; e.g. `sudo brew install ack` (using [Homebrew][homebrew])
 4. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
-5. ...
+5. tags &mdash; Download from http://ctags.sourceforge.net/
 
 Adding plugins
 --------------

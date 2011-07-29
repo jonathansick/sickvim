@@ -1,56 +1,6 @@
 " Based on https://github.com/sontek/dotfiles/
 " and influenced by http://amix.dk/vim/vimrc.html
 " tailored to fit by Jonathan Sick, jonathansick@mac.com
-" =========================================================
-" Dependencies - Libraries/Applications outside of vim
-" ==========================================================
-" Pep8 - http://pypi.python.org/pypi/pep8
-" Pyflakes
-" Ack
-" Rake & Ruby for command-t
-" nose, django-nose
-
-" ==========================================================
-" Plugins included
-" ==========================================================
-" Pathogen
-"     Better Management of VIM plugins 
-"
-" GunDo
-"     Visual Undo in vim with diff's to check the differences
-"
-" Pytest
-"     Runs your Python tests in Vim.
-"
-" Commant-T
-"     Allows easy search and opening of files within a given path 
-"
-" Snipmate
-"     Configurable snippets to avoid re-typing common comands
-"
-" PyFlakes
-"     Underlines and displays errors with Python on-the-fly
-"
-" Fugitive
-"    Interface with git from vim
-"
-" Git
-"    Syntax highlighting for git config files
-"
-" Minibufexpl
-"    Visually display what buffers are currently opened
-"
-" Pydoc
-"    Opens up pydoc within vim
-"
-" Surround
-"    Allows you to surround text with open/close tags
-"
-" Py.test
-"    Run py.test test's from within vim 
-"
-" MakeGreen
-"    Generic test runner that works with nose
 "
 " ==========================================================
 " Shortcuts 
@@ -298,7 +248,7 @@ if has("autocmd")
     filetype on
     
     " auto-wrap prose
-    autocmd FileType text,markdown,html,tex setlocal wrap linebreak nolist
+    autocmd FileType text,markdown,html,tex,rst setlocal wrap linebreak nolist
 
     autocmd FileType gitconfig setlocal ts=4 sts=4 sw=4 noexpandtab
 endif
@@ -339,14 +289,15 @@ autocmd! BufNewFile * call LoadTemplate()
 
 " === Spellcheck
 
-if v:version > 700 && has('gui_running')
-    set spell 
-    setlocal spell spelllang=en_us
-endif
+"if v:version > 700 && has('gui_running')
+"    set spell 
+"    setlocal spell spelllang=en_us
+"endif
 
 " === Ctags/Taglist
 
 " map <leader>t :TlistToggle<CR>
+let Tlist_Ctags_Cmd="/usr/local/bin/ctags" " use exuberant ctags
 nmap ,t :!(cd %:p:h;ctags *)<CR>        " rebuild tag index
 set tags=./tags,tags                    " configure Ctags to use global project tags
 let Tlist_Auto_Open = 1                 " automatically open taglist
