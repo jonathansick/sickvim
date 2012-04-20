@@ -44,7 +44,7 @@ Since plugins are submodules, they can be updated by issuing `git pull` within t
 
 Plugins can be updated in bulk using the command:
 
-    git submodule foreach git pull
+    git submodule foreach git pull origin master
 
 If you don't have them, you'll also need to install the dependencies.
 
