@@ -54,8 +54,23 @@ If you don't have them, you'll also need to install the dependencies.
 4. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
 5. tags &mdash; Download from http://ctags.sourceforge.net/
 
-Adding plugins
---------------
+Updating this Vim setup
+-----------------------
+
+Updating the Vim directory requires two steps: pull changes from github, and updating the plug-ins.
+
+    git pull origin master
+    git submodule foreach git pull origin master
+
+If any plug-ins were updated, those can be pushed back to Github
+
+    git commit *bundles* -m "Updated plug-ins"
+    git push origin master
+
+When other users pull that commit and update their submodules, this git repository should be clean.
+
+Adding and removing plugins
+---------------------------
 
 Additional plugins can be installed via the procedure
 
