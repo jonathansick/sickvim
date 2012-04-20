@@ -12,7 +12,7 @@ These plugins are currently installed (my additions from Anderson's basic Python
 
 * GunDo &mdash; Visual Undo in vim with diff's to check the differences
 * Pytest &mdash; Runs your Python tests in Vim.
-* Commant-T &mdash; Allows easy search and opening of files within a given path
+* Command-T &mdash; Allows easy search and opening of files within a given path
 * Snipmate &mdash; Configurable snippets to avoid re-typing common comands
 * PyFlakes &mdash; Underlines and displays errors with Python on-the-fly
 * Fugitive &mdash; Interface with git from vim
@@ -27,6 +27,8 @@ These plugins are currently installed (my additions from Anderson's basic Python
 * cython &mdash; pyrex and Cython syntax highlighting
 * latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
 * TagList &mdash; list and jump between functions in your source using CTags
+* [commentary](https://github.com/tpope/vim-commentary) &mdash; Comment lines with `\\\`.
+* [repeat](https://github.com/tpope/vim-repeat) &mdash; support the dot command with plugin maps (like in surround.vim and commentary.com).
 
 Installation
 ------------
