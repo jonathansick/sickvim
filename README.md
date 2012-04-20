@@ -8,8 +8,14 @@ Features
 
 I use Ethan Schoonover's [Solarized][] colour theme, with low visibility on "invisible" characters.
 
-These plugins are currently installed (my additions from Anderson's basic Python IDE setup are at the bottom):
+These plugins are currently installed:
 
+* [commentary](https://github.com/tpope/vim-commentary) &mdash; Comment lines with `\\\` and comment a paragraph with `\\ap`. Notes these are toggles!
+* [repeat](https://github.com/tpope/vim-repeat) &mdash; support the dot command with plugin maps (like in surround.vim and commentary.com).
+* TagList &mdash; list and jump between functions in your source using CTags
+* [Surround](https://github.com/tpope/vim-surround) &mdash; Allows you to surround text with open/close tags
+* NERDTree &mdash; file system explorer, like TextMate's drawer
+* Minibufexpl &mdash; Visually display what buffers are currently opened
 * GunDo &mdash; Visual Undo in vim with diff's to check the differences
 * Pytest &mdash; Runs your Python tests in Vim.
 * Command-T &mdash; Allows easy search and opening of files within a given path
@@ -17,18 +23,12 @@ These plugins are currently installed (my additions from Anderson's basic Python
 * PyFlakes &mdash; Underlines and displays errors with Python on-the-fly
 * Fugitive &mdash; Interface with git from vim
 * Git &mdash; Syntax highlighting for git config files
-* Minibufexpl &mdash; Visually display what buffers are currently opened
 * Pydoc &mdash; Opens up pydoc within vim
-* Surround &mdash; Allows you to surround text with open/close tags
 * Py.test &mdash; Run py.test test's from within vim
 * MakeGreen &mdash; Generic test runner that works with nose
-* NERDTree &mdash; file system explorer, like TextMate's drawer
 * Markdown &mdash; markdown syntax highlighting
 * cython &mdash; pyrex and Cython syntax highlighting
 * latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
-* TagList &mdash; list and jump between functions in your source using CTags
-* [commentary](https://github.com/tpope/vim-commentary) &mdash; Comment lines with `\\\`.
-* [repeat](https://github.com/tpope/vim-repeat) &mdash; support the dot command with plugin maps (like in surround.vim and commentary.com).
 
 Installation
 ------------
