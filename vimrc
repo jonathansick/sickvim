@@ -296,7 +296,7 @@ autocmd! BufNewFile * call LoadTemplate()
 
 " === Ctags/Taglist
 
-" map <leader>t :TlistToggle<CR>
+map <leader>tt :TlistToggle<CR>
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags" " use exuberant ctags
 nmap ,t :!(cd %:p:h;ctags *)<CR>        " rebuild tag index
 set tags=./tags,tags                    " configure Ctags to use global project tags
