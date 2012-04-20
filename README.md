@@ -36,9 +36,10 @@ This project can be cloned as your `~.vim` directory and the relevant dotfiles a
 1. `git clone git://github.com/jonathansick/sickvim.git ~/.vim`
 2. `ln -s ~/.vim/vimrc ~/.vimrc`
 3. `ln -s ~/.vim/gvimrc ~/.gvimrc`
-4. `git submodule update --init`
-5. `cd ~/.vim/bundle/command-t; rake make`
-6. `cd ~/.vim/doc/; vim` then run `:helptags .`
+4. `ln -s ~/.vim/ctags.conf ~/.ctags`
+5. `git submodule update --init`
+6. `cd ~/.vim/bundle/command-t; rake make`
+7. `cd ~/.vim/doc/; vim` then run `:helptags .`
 
 Since plugins are submodules, they can be updated by issuing `git pull` within their respective directories in `bundle/`.
 

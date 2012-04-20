@@ -304,3 +304,6 @@ let Tlist_Auto_Open = 1                 " automatically open taglist
 let Tlist_Use_Right_Window = 1          " only open taglist on the right
 let Tlist_Exit_OnlyWindow = 1           " automatically close taglist when we close the window
 
+" LaTeX support! See http://vim-taglist.sourceforge.net/extend.html
+let tlist_tex_settings   = 'latex;s:sections;g:graphics;l:labels;b:bibitem'
+let tlist_make_settings  = 'make;m:makros;t:targets'
