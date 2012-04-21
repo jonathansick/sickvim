@@ -1,20 +1,9 @@
-# MY doctring
+# snippets for numpydoc
+# see https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
+#
+# Method/function docstring
 snippet doc
-	"""
-	NAME:
-		${1}
-	PURPOSE:
-		${2}
-	INPUT:
-		${3}
-	OUTPUT:
-		${4}
-	HISTORY:
-	    Created by ${5:`g:snips_author`} on `system("date '+%b %d, %Y'")`
-	"""
-snippet doc2
-	"""
-	${1:Purpose}
+	"""${1:Purpose}
 	
 	Parameters
 	----------
@@ -25,17 +14,20 @@ snippet doc2
 	-------
 	${5:ret} : ${6:type}
 	    ${7:Description}
-	
-	History
-	-------
-	`system("date '+%Y-%m-%d'")` - Created by ${15:`g:snips_author`}
-	
 	"""
 snippet example
 	Examples
 	--------
-	${14:>>> my_function()}
+	${1}
 	
-snippet docpar
+	>>> ${2:code}
+# Documenting var:type:description in numpydoc format
+snippet docp
 	${1} : ${2}
 	    ${3:Description}
+# Documenting attributes within class definitions
+snippet docat
+	Attributes
+	----------
+	${2:param} : ${3:type}
+	    ${4:Description}
