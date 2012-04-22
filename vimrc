@@ -14,8 +14,9 @@ command! W :w
 " Toggle the tasklist
 map <leader>td <Plug>TaskList
 
-" Run pep8
-let g:pep8_map='<leader>8'
+" Compile markdown into Marked
+" http://support.markedapp.com/kb/how-to-tips-and-tricks/marked-bonus-pack-scripts-commands-and-bundles
+:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
 
 " run py.test's
 nmap <silent><Leader>tf <Esc>:Pytest file<CR>
