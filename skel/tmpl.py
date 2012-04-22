@@ -3,17 +3,9 @@
 """
 %START%
 
-History
--------
 %DATE% - Created by %AUTHOR%
 
 """
-
-__all__ = ['']
-
-import numpy as np
-import pylab as pl
-
 
 def main():
     pass
