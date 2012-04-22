@@ -16,11 +16,11 @@ These plugins are currently installed:
 * [Surround](https://github.com/tpope/vim-surround) &mdash; Allows you to surround text with open/close tags
 * NERDTree &mdash; file system explorer, like TextMate's drawer
 * Minibufexpl &mdash; Visually display what buffers are currently opened
+* [flake8](https://github.com/nvie/vim-flake8) &mdash; combines the syntax checking of pyflakes with the syntax checking of pep8. Read about it on [nvie](http://nvie.com/posts/vim-flake8-flake8-for-vim/) blog. Call it with <F7>, or it will alternatively run whenever the file is saved.
 * GunDo &mdash; Visual Undo in vim with diff's to check the differences
 * Pytest &mdash; Runs your Python tests in Vim.
 * Command-T &mdash; Allows easy search and opening of files within a given path
 * Snipmate &mdash; Configurable snippets to avoid re-typing common comands
-* PyFlakes &mdash; Underlines and displays errors with Python on-the-fly
 * Fugitive &mdash; Interface with git from vim
 * Git &mdash; Syntax highlighting for git config files
 * Pydoc &mdash; Opens up pydoc within vim
@@ -51,11 +51,10 @@ Plugins can be updated in bulk using the command:
 
 If you don't have them, you'll also need to install the dependencies.
 
-1. Pep8 &mdash; `sudo easy_install pep8`
-2. PyFlakes &mdash; `sudo easy_install pyflakes`
-3. Ack &mdash; e.g. `sudo brew install ack` (using [Homebrew][homebrew])
-4. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
-5. tags &mdash; Download from http://ctags.sourceforge.net/
+1. Flakes8 &mdash `pip install flakes8` for vim-flake8 plugin
+2. Ack &mdash; e.g. `sudo brew install ack` (using [Homebrew][homebrew])
+3. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
+4. tags &mdash; Download from http://ctags.sourceforge.net/
 
 Updating this Vim setup
 -----------------------
