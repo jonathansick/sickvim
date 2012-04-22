@@ -26,7 +26,7 @@ These plugins are currently installed:
 * Pydoc &mdash; Opens up pydoc within vim
 * Py.test &mdash; Run py.test test's from within vim
 * MakeGreen &mdash; Generic test runner that works with nose
-* Markdown &mdash; markdown syntax highlighting
+* [Markdown](https://github.com/tpope/vim-markdown) &mdash; markdown syntax highlighting
 * cython &mdash; pyrex and Cython syntax highlighting
 * latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
 
