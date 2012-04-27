@@ -74,10 +74,6 @@
 	path = bundle/repeat
 	url = git://github.com/tpope/vim-repeat.git
 	ignore = dirty
-[submodule "bundle/flake8"]
-	path = bundle/flake8
-	url = git://github.com/nvie/vim-flake8.git
-	ignore = dirty
 [submodule "bundle/markdown"]
 	path = bundle/markdown
 	url = https://github.com/tpope/vim-markdown.git

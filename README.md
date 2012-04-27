@@ -16,7 +16,6 @@ These plugins are currently installed:
 * [Surround](https://github.com/tpope/vim-surround) &mdash; Allows you to surround text with open/close tags
 * NERDTree &mdash; file system explorer, like TextMate's drawer
 * Minibufexpl &mdash; Visually display what buffers are currently opened
-* [flake8](https://github.com/nvie/vim-flake8) &mdash; combines the syntax checking of pyflakes with the syntax checking of pep8. Read about it on [nvie](http://nvie.com/posts/vim-flake8-flake8-for-vim/) blog. Call it with <F7>, or it will alternatively run whenever the file is saved. Specific error codes can be ignored by writing, e.g. `let g:flake8_ignore="E501,W293"`in the `vimrc`. See the [flake8](http://pypi.python.org/pypi/flake8) docs for a list of error codes.
 * GunDo &mdash; Visual Undo in vim with diff's to check the differences
 * Pytest &mdash; Runs your Python tests in Vim.
 * Command-T &mdash; Allows easy search and opening of files within a given path
