@@ -77,8 +77,8 @@ Adding and removing plugins
 Additional plugins can be installed via the procedure
 
 1. `cd ~/.vim`
-1. `git submodule add bundle_url bundle/yourbundlename`
-2. `git submodule init`
+2. `git submodule add bundle_url bundle/yourbundlename`
+3. `git submodule init`
 
 In  `~/.vim/.gitmodules`, it is useful add the line
 
@@ -86,7 +86,14 @@ In  `~/.vim/.gitmodules`, it is useful add the line
 
 to each submodule. This prevents help tag generation from creating the illusion of the plugins changing. See [Nils Haldenwang's blog for details.][dirty]
 
-To remove a plugin, see [this Stack Overflow answer for removing submodules](http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule).
+To remove a plugin
+
+1. Delete the relevant line from the `.gitmodules` file.
+2. Delete the relevant section from `.git/config`.
+3. Run `git rm --cached path_to_submodule` (**no trailing slash**).
+4. Commit and delete the now untracked submodule files.
+
+(See [this Stack Overflow answer for removing submodules](http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule).)
 
 [home]: http://www.jonathansick.ca
 [anderson]: http://sontek.net/turning-vim-into-a-modern-python-ide
