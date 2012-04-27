@@ -276,10 +276,8 @@ autocmd! BufNewFile * call LoadTemplate()
 
 " === Spellcheck
 
-"if v:version > 700 && has('gui_running')
-"    set spell 
-"    setlocal spell spelllang=en_us
-"endif
+nmap <silent> <leader>s :set spell!<CR>
+set spelllang=en_ca " choose en / en_us / en_ca etc.
 
 " === Ctags/Taglist
 
