@@ -13,6 +13,7 @@ These plugins are currently installed:
 * [commentary](https://github.com/tpope/vim-commentary) &mdash; Comment lines with `\\\` and comment a paragraph with `\\ap`. Notes these are toggles!
 * [repeat](https://github.com/tpope/vim-repeat) &mdash; support the dot command with plugin maps (like in surround.vim and commentary.com).
 * TagList &mdash; list and jump between functions in your source using CTags
+* [Syntastic](https://github.com/scrooloose/syntastic) &mdash; multi-lingual syntax checking.
 * [Surround](https://github.com/tpope/vim-surround) &mdash; Allows you to surround text with open/close tags
 * NERDTree &mdash; file system explorer, like TextMate's drawer
 * Minibufexpl &mdash; Visually display what buffers are currently opened
@@ -50,7 +51,7 @@ Plugins can be updated in bulk using the command:
 
 If you don't have them, you'll also need to install the dependencies.
 
-1. Flakes8 &mdash `pip install flakes8` for vim-flake8 plugin
+1. Flakes8 &mdash; `pip install flakes8` for syntasic plugin
 2. Ack &mdash; e.g. `sudo brew install ack` (using [Homebrew][homebrew])
 3. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
 4. tags &mdash; Download from http://ctags.sourceforge.net/
