@@ -1,7 +1,7 @@
 " Based on https://github.com/sontek/dotfiles/
 " and influenced by http://amix.dk/vim/vimrc.html
 " tailored to fit by Jonathan Sick, jonathansick@mac.com
-"
+
 " ==========================================================
 " Shortcuts 
 " ==========================================================
@@ -205,17 +205,12 @@ endif
 
 " Display, use the Solarized colour scheme,
 " http://ethanschoonover.com/solarized/vim-colors-solarized
-if has('gui_running')
-    syntax enable
-    set background=dark
-    let g:solarized_termtrans=1
-    "let g:solarized_contrast = "normal"
-    "let g:solarized_visibility = "low"
-    colorscheme solarized
-else
-    set background=dark
-    "colorscheme impact
-endif
+syntax enable
+set background=light
+let g:solarized_termtrans=1
+"let g:solarized_contrast = "normal"
+"let g:solarized_visibility = "low"
+colorscheme solarized
 
 " === LaTeX, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/recommended-settings.html
