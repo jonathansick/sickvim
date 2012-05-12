@@ -1,3 +1,4 @@
+scriptencoding utf-8
 " Based on https://github.com/sontek/dotfiles/
 " and influenced by http://amix.dk/vim/vimrc.html
 " tailored to fit by Jonathan Sick, jonathansick@mac.com
