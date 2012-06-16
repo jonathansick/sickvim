@@ -9,6 +9,9 @@ scriptencoding utf-8
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " change the leader to be a comma vs slash
 
+" Get back to normal mode faster
+:inoremap kj <Esc>
+
 " Seriously, guys. It's not like :W is bound to anything anyway.
 command! W :w
 
@@ -17,7 +20,7 @@ map <leader>td <Plug>TaskList
 
 " Compile markdown into Marked
 " http://support.markedapp.com/kb/how-to-tips-and-tricks/marked-bonus-pack-scripts-commands-and-bundles
-:nnoremap <leader>m :silent !open -a Marked.app '%:p'<cr>
+:nnoremap <leader>marked :silent !open -a Marked.app '%:p'<cr>
 
 " run py.test's
 nmap <silent><Leader>tf <Esc>:Pytest file<CR>
