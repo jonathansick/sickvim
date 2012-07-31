@@ -8,11 +8,13 @@ scriptencoding utf-8
 " ==========================================================
 set nocompatible              " Don't be compatible with vi
 let mapleader=","             " change the leader to be a comma vs slash
+" Use \ to complement ; for reverse character search
+nnoremap \ ,
 
 " Get back to normal mode faster
 :inoremap kj <Esc>
 
-" Seriously, guys. It's not like :W is bound to anything anyway.
+" Seriously guys. It's not like :W is bound to anything anyway.
 command! W :w
 
 " Toggle the tasklist
@@ -280,9 +282,9 @@ set spelllang=en_ca " choose en / en_us / en_ca etc.
 
 " === Ctags/Taglist
 
-map <leader>tt :TlistToggle<CR>
+map <leader>tags :TlistToggle<CR>
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags" " use exuberant ctags
-nmap ,t :!(cd %:p:h;ctags *)<CR>        " rebuild tag index
+nmap ,tagup :!(cd %:p:h;ctags *)<CR>        " rebuild tag index
 set tags=./tags,tags                    " configure Ctags to use global project tags
 let Tlist_Auto_Open = 1                 " automatically open taglist
 let Tlist_Use_Right_Window = 1          " only open taglist on the right
