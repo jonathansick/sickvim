@@ -7,6 +7,7 @@ scriptencoding utf-8
 " Shortcuts 
 " ==========================================================
 set nocompatible              " Don't be compatible with vi
+set hidden                    " Lusty plugin prefers this
 let mapleader=","             " change the leader to be a comma vs slash
 " Use \ to complement ; for reverse character search
 nnoremap \ ,

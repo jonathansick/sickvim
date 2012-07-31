@@ -78,3 +78,7 @@
 	path = bundle/syntastic
 	url = git://github.com/scrooloose/syntastic.git
 	ignore = dirty
+[submodule "bundle/lusty"]
+	path = bundle/lusty
+	url = https://github.com/sjbach/lusty.git
+	ignore = dirty
