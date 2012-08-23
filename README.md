@@ -64,6 +64,8 @@ Updating the Vim directory requires two steps: pull changes from github, and upd
     git pull origin master
     git submodule foreach git pull origin master
 
+(a call to `git submodule update` may also help to load plugins… I *still* need to figure out best practices for submodules).
+
 If any plug-ins were updated, those can be pushed back to Github
 
     git commit *bundles* -m "Updated plug-ins"
