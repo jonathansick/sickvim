@@ -238,7 +238,11 @@ if has("autocmd")
     
     " auto-wrap prose
     autocmd FileType text,markdown,html,tex,rst setlocal wrap linebreak nolist
+    
+    " smaller tabs for html, sass
+    autocmd FileType html,sass setlocal ts=2 sts=2 sw=2
 
+    " Special gitconfig settings
     autocmd FileType gitconfig setlocal ts=4 sts=4 sw=4 noexpandtab
 endif
 
