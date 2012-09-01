@@ -246,6 +246,26 @@ if has("autocmd")
     autocmd FileType gitconfig setlocal ts=4 sts=4 sw=4 noexpandtab
 endif
 
+
+" Prose writing settings
+" inspired by http://www.drbunsen.org/writing-in-vim.html
+func WordProcessorMode()
+    setlocal formatoptions=1
+    setlocal expandtab
+    map j gj
+    map k gk
+    setlocal spell spelllang=en_ca
+    setlocal wrap
+    setlocal linebreak
+    setlocal ts=2
+    setlocal sts=2
+    setlocal sw=2
+    set linespace=5
+    set guifont=*
+    set guifont=Menlo:h14
+endfu
+com! WP call WordProcessorMode()
+
 " Auto-update vim with modified vimrc
 " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
 if has("autocmd")
