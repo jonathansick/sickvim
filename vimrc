@@ -304,6 +304,7 @@ autocmd! BufNewFile * call LoadTemplate()
 
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_ca " choose en / en_us / en_ca etc.
+setlocal spellfile=~/.vim/spell/en.utf-8.add
 
 " === Ctags/Taglist
 
