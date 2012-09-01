@@ -59,12 +59,14 @@ If you don't have them, you'll also need to install the dependencies.
 Updating this Vim setup
 -----------------------
 
-Updating the Vim directory requires two steps: pull changes from github, and updating the plug-ins.
+Updating the Vim directory requires two steps. First, pull changes from Github:
 
     git pull origin master
-    git submodule foreach git pull origin master
+		git submodule update
 
-(a call to `git submodule update` may also help to load plugins… I *still* need to figure out best practices for submodules).
+then update plugins,
+
+	 git submodule foreach git pull origin master
 
 If any plug-ins were updated, those can be pushed back to Github
 
