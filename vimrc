@@ -260,9 +260,11 @@ func WordProcessorMode()
     setlocal ts=2
     setlocal sts=2
     setlocal sw=2
-    set linespace=5
-    set guifont=*
-    set guifont=Menlo:h14
+    setlocal linespace=5
+    setlocal guifont=*
+    setlocal guifont=Menlo:h14
+    highlight Cursor guifg=#002B36 guibg=#268DB2
+    highlight iCursor guifg=#268DB2 guibg=#002B36
 endfu
 com! WP call WordProcessorMode()
 
