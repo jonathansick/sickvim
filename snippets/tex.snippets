@@ -1,0 +1,13 @@
+# LaTeX template snippets
+
+# TODO message printed in my TODO command environment
+snippet ltodo
+	\todo{TODO${1: Message}}
+# Template for inserting a figure
+snippet fig
+	\begin{figure}[t]
+	\centering
+	\includegraphics[width=\columnwidth]{${1:path}}
+	\caption{${2:caption}}
+	\label{fig:${3:label}}
+	\end{figure}
