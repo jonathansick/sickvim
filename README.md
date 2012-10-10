@@ -1,10 +1,8 @@
-Jonathan Sick's Vim Configuration
-=================================
+# Jonathan Sick's Vim Configuration
 
 My vim configuration is derived from work by [John Anderson][anderson]. As described in [a vimcast][submodulevimcast], plugins are installed as git submodules with [Pathogen][].
 
-Features
---------
+## Features
 
 I use Ethan Schoonover's [Solarized][] colour theme, with low visibility on "invisible" characters.
 
@@ -30,24 +28,20 @@ These plugins are currently installed:
 * cython &mdash; pyrex and Cython syntax highlighting
 * latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
 
-Installation
-------------
+## Installation
 
 This project can be cloned as your `~.vim` directory and the relevant dotfiles are linked into the home directory.
 
-1. `git clone git://github.com/jonathansick/sickvim.git ~/.vim`
-2. `ln -s ~/.vim/vimrc ~/.vimrc`
-3. `ln -s ~/.vim/gvimrc ~/.gvimrc`
-4. `ln -s ~/.vim/ctags.conf ~/.ctags`
-5. `git submodule update --init`
-6. `cd ~/.vim/bundle/command-t; rake make`
-7. `cd ~/.vim/doc/; vim` then run `:helptags .`
+Let the bootstrap script take care of it:
 
-Since plugins are submodules, they can be updated by issuing `git pull` within their respective directories in `bundle/`.
+    curl -L https://raw.github.com/jonathansick/sickvim/master/bootstrap.sh | bash
 
-Plugins can be updated in bulk using the command:
+By default this sets the Github remote protocol to HTTPS.
+If you're *me*, you can switch it to SSH access by manually calling
 
-    git submodule foreach git pull origin master
+    ~/.vim/enable_github.sh
+
+### Dependencies
 
 If you don't have them, you'll also need to install the dependencies.
 
@@ -56,13 +50,12 @@ If you don't have them, you'll also need to install the dependencies.
 3. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
 4. tags &mdash; Download from http://ctags.sourceforge.net/
 
-Updating this Vim setup
------------------------
+## Updating this Vim setup
 
 Updating the Vim directory requires two steps. First, pull changes from Github:
 
     git pull origin master
-		git submodule update
+	git submodule update
 
 then update plugins,
 
@@ -75,8 +68,7 @@ If any plug-ins were updated, those can be pushed back to Github
 
 When other users pull that commit and update their submodules, this git repository should be clean.
 
-Adding and removing plugins
----------------------------
+## Adding and removing plugins
 
 Additional plugins can be installed via the procedure
 
