@@ -17,9 +17,9 @@ cd $DOTVIM
 git submodule update --init
 
 # Link it
-ln -Ffs $DOTVIM/vimrc $DOTVIM/.vimrc
-ln -Ffs $DOTVIM/gvimrc $DOTVIM/.gvimrc
-ln -Ffs $DOTVIM/ctags.conf $DOTVIM/.ctags
+ln -Ffs $DOTVIM/vimrc $HOME/.vimrc
+ln -Ffs $DOTVIM/gvimrc $HOME/.gvimrc
+ln -Ffs $DOTVIM/ctags.conf $HOME/.ctags
 
 # Compile Command-t
 (cd $DOTVIM/bundle/command-t; rake make)
