@@ -82,3 +82,7 @@
 	path = bundle/lusty
 	url = https://github.com/sjbach/lusty.git
 	ignore = dirty
+[submodule "bundle/eunuch"]
+	path = bundle/eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+	ignore = dirty

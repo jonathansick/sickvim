@@ -27,6 +27,7 @@ These plugins are currently installed:
 * [Markdown](https://github.com/tpope/vim-markdown) &mdash; markdown syntax highlighting
 * cython &mdash; pyrex and Cython syntax highlighting
 * latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
+* [eunuch](https://github.com/tpope/vim-eunuch) &mdash; provides handy syntactic sugar for Unixy stuff in vim. `:Rename` is handy if you're not working in a git repository.
 
 ## Installation
 
