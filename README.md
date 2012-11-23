@@ -46,7 +46,7 @@ If you're *me*, you can switch it to SSH access by manually calling
 
 If you don't have them, you'll also need to install the dependencies.
 
-1. Flakes8 &mdash; `pip install flakes8` for syntasic plugin
+1. Flake8 &mdash; `pip install flake8` for syntasic plugin. Another option is `pyflakes`.
 2. Ack &mdash; e.g. `sudo brew install ack` (using [Homebrew][homebrew])
 3. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
 4. tags &mdash; Download from http://ctags.sourceforge.net/
