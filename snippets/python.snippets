@@ -31,3 +31,31 @@ snippet docat
 	----------
 	${2:param} : ${3:type}
 	    ${4:Description}
+
+# snippets for Matplotlib
+snippet mplimp
+	import matplotlib as mpl
+	from matplotlib.figure import Figure
+	from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+	import matplotlib.gridspec as gridspec
+# Generic OO plot using gridspec and tight layout
+snippet ooplot
+	fig = Figure(figsize=(3.5, 3.5))
+	canvas = FigureCanvas(fig)
+	gs = gridspec.GridSpec(1, 1, left=0.15, right=0.95, bottom=0.15, top=0.95,
+	    wspace=None, hspace=None, width_ratios=None, height_ratios=None)
+	ax = fig.add_subplot(gs[0])
+	pass
+	gs.tight_layout(fig, pad=1.08, h_pad=None, w_pad=None, rect=None)
+	canvas.print_figure(plotPath + ".pdf", format="pdf")
+	canvas.print_figure(plotPath + ".eps", format="eps")
+# Hide ticklabels for an axis
+snippet notl
+	for tl in ax.get_xmajorticklabels():
+	    tl.set_visible(False)
+# Make a colour bar with axes_grid; has same length as parent axis
+snippet cbar
+	from mpl_toolkits.axes_grid1 import make_axes_locatable
+	divider = make_axes_locatable(ax)
+	cax = divider.append_axes("right", "5%", pad="3%")
+	fig.colorbar(mappable, cax=cax, ax=ax)
