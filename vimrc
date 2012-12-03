@@ -272,6 +272,11 @@ func WordProcessorMode()
 endfu
 com! WP call WordProcessorMode()
 
+" Formd mappings - Convert inline to referenced style markdown
+" http://drbunsen.github.com/formd/
+nmap <leader>fr :%! formd -r<CR>
+nmap <leader>fi :%! formd -i<CR>
+
 " Auto-update vim with modified vimrc
 " http://vimcasts.org/episodes/updating-your-vimrc-file-on-the-fly/
 if has("autocmd")
