@@ -231,6 +231,7 @@ let g:tex_flavor='latex'
 let g:LatexBox_latexmk_options="-f -pdf -bibtex-cond"
 map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
 		\ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p"
+let g:tex_fold_enabled=1
 
 " Refine settings for specific filetypes
 if has("autocmd")

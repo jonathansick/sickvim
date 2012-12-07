@@ -17,6 +17,8 @@ let g:Tex_ViewRule_pdf = 'Skim'
 let g:Tex_FormatDependency_ps  = 'dvi,ps'
 let g:Tex_FormatDependency_pspdf = 'dvi,ps,pspdf'
 let g:Tex_FormatDependency_dvipdf = 'dvi,dvipdf'
+
+setlocal foldmethod=syntax
  
 " let g:Tex_IgnoredWarnings ='
 "       \"Underfull\n".
