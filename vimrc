@@ -267,7 +267,7 @@ func WordProcessorMode()
     " setlocal guifont=Nitti\ Light:h18
     " setlocal linespace=9
     " setlocal guifont=Nitti\ Light:h16
-    setlocal guifont=Source Code Pro:h14
+    setlocal guifont=Source\ Code\ Pro:h14
     setlocal linespace=4
     highlight Cursor guifg=#002B36 guibg=#268DB2
     highlight iCursor guifg=#268DB2 guibg=#002B36
