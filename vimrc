@@ -8,55 +8,6 @@ set hidden                    " Lusty plugin prefers this
 set encoding=utf-8            " Force UTF-8; maybe presumptive?
 
 " ==========================================================
-" Shortcuts 
-" ==========================================================
-let mapleader=","             " change the leader to be a comma vs slash
-" Use \ to complement ; for reverse character search
-nnoremap \ ,
-
-" Get back to normal mode faster
-:inoremap kj <Esc>
-
-" Seriously guys. It's not like :W is bound to anything anyway.
-command! W :w
-
-" Toggle the tasklist
-map <leader>td <Plug>TaskList
-
-" open/close the quickfix window
-nmap <leader>c :copen<CR>
-nmap <leader>cc :cclose<CR>
-
-" for when we forget to use sudo to open/edit a file
-cmap w!! w !sudo tee % >/dev/null
-
-" ctrl-jklm  changes to that split
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-
-" and lets make these all work in insert mode too ( <C-O> makes next cmd
-"  happen as if in command mode )
-imap <C-W> <C-O><C-W>
-
-" Open NerdTree
-map <leader>n :NERDTreeToggle<CR>
-
-" Run command-t file search
-map <leader>f :CommandT<CR>
-" Ack searching 
-nmap <leader>a <Esc>:Ack! 
-
-" Load the Gundo window
-map <leader>g :GundoToggle<CR>
-
-" Jump to the definition of whatever the cursor is on
-map <leader>j :RopeGotoDefinition<CR>
-
-" Rename whatever the cursor is on (including references to it)
-map <leader>r :RopeRename<CR>
-" ==========================================================
 " Pathogen - Allows us to organize our vim plugins
 " ==========================================================
 " Load pathogen with docs for all plugins
@@ -151,6 +102,54 @@ set ignorecase              " Default to using case insensitive searches,
 set smartcase               " unless uppercase letters are used in the regex.
 set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
+
+" ==========================================================
+" Shortcuts 
+" ==========================================================
+
+" Get back to normal mode faster
+:inoremap kj <Esc>
+
+" Seriously guys. It's not like :W is bound to anything anyway.
+command! W :w
+
+" Toggle the tasklist
+map <leader>td <Plug>TaskList
+
+" open/close the quickfix window
+nmap <leader>c :copen<CR>
+nmap <leader>cc :cclose<CR>
+
+" for when we forget to use sudo to open/edit a file
+cmap w!! w !sudo tee % >/dev/null
+
+" ctrl-jklm  changes to that split
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+" and lets make these all work in insert mode too ( <C-O> makes next cmd
+"  happen as if in command mode )
+imap <C-W> <C-O><C-W>
+
+" Open NerdTree
+map <leader>n :NERDTreeToggle<CR>
+
+" Run command-t file search
+map <leader>f :CommandT<CR>
+" Ack searching 
+nmap <leader>a <Esc>:Ack! 
+
+" Load the Gundo window
+map <leader>g :GundoToggle<CR>
+
+" Jump to the definition of whatever the cursor is on
+map <leader>j :RopeGotoDefinition<CR>
+
+" Rename whatever the cursor is on (including references to it)
+map <leader>r :RopeRename<CR>
+
 
 " ==========================================================
 " SuperTab - Allows us to get code completion with tab
