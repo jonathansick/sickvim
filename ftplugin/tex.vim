@@ -1,3 +1,5 @@
+setlocal wrap linebreak nolist
+
 " Personal configurations for latex-suite, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/customizing-latex-suite.html
 "

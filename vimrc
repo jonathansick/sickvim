@@ -3,12 +3,13 @@ scriptencoding utf-8
 " and influenced by http://amix.dk/vim/vimrc.html
 " tailored to fit by Jonathan Sick, jonathansick@mac.com
 
-" ==========================================================
-" Shortcuts 
-" ==========================================================
 set nocompatible              " Don't be compatible with vi
 set hidden                    " Lusty plugin prefers this
 set encoding=utf-8            " Force UTF-8; maybe presumptive?
+
+" ==========================================================
+" Shortcuts 
+" ==========================================================
 let mapleader=","             " change the leader to be a comma vs slash
 " Use \ to complement ; for reverse character search
 nnoremap \ ,
@@ -21,10 +22,6 @@ command! W :w
 
 " Toggle the tasklist
 map <leader>td <Plug>TaskList
-
-" Compile markdown into Marked
-" http://support.markedapp.com/kb/how-to-tips-and-tricks/marked-bonus-pack-scripts-commands-and-bundles
-:nnoremap <leader>marked :silent !open -a Marked.app '%:p'<cr>
 
 " open/close the quickfix window
 nmap <leader>c :copen<CR>
@@ -156,11 +153,6 @@ set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
 
 " ==========================================================
-" Javascript
-" ==========================================================
-au BufRead *.js set makeprg=jslint\ %
-
-" ==========================================================
 " SuperTab - Allows us to get code completion with tab
 " ==========================================================
 " Try different completion methods depending on its context
@@ -198,35 +190,6 @@ let g:solarized_termtrans=1
 "let g:solarized_contrast = "normal"
 "let g:solarized_visibility = "low"
 colorscheme solarized
-
-" === LaTeX, see
-" http://vim-latex.sourceforge.net/documentation/latex-suite/recommended-settings.html
-let g:tex_flavor='latex'
-" See http://www.phys.psu.edu/~collins/software/latexmk-jcc/ for latex
-" options. I use:
-" -f force latexmk to continue a compilation with errors
-" -bibtex-cond regenerates bbl only if the bibtex file can be found
-" -pdf uses pdflatex
-let g:LatexBox_latexmk_options="-f -pdf -bibtex-cond"
-map <silent> <Leader>ls :silent !/Applications/Skim.app/Contents/SharedSupport/displayline
-		\ <C-R>=line('.')<CR> "<C-R>=LatexBox_GetOutputFile()<CR>" "%:p"
-let g:tex_fold_enabled=1
-
-" Refine settings for specific filetypes
-if has("autocmd")
-    " Enable file type detection
-    filetype on
-    
-    " auto-wrap prose
-    autocmd FileType text,markdown,html,tex,rst setlocal wrap linebreak nolist
-    
-    " smaller tabs for html, sass
-    autocmd FileType html,sass setlocal ts=2 sts=2 sw=2
-
-    " Special gitconfig settings
-    autocmd FileType gitconfig setlocal ts=4 sts=4 sw=4 noexpandtab
-endif
-
 
 " Prose writing settings
 " inspired by http://www.drbunsen.org/writing-in-vim.html
@@ -312,7 +275,6 @@ set tags=./tags,tags                    " configure Ctags to use global project 
 let Tlist_Auto_Open = 1                 " automatically open taglist
 let Tlist_Use_Right_Window = 1          " only open taglist on the right
 let Tlist_Exit_OnlyWindow = 1           " automatically close taglist when we close the window
-
 " LaTeX support! See http://vim-taglist.sourceforge.net/extend.html
 let tlist_tex_settings   = 'latex;s:sections;g:graphics;l:labels;b:bibitem'
 let tlist_make_settings  = 'make;m:makros;t:targets'
