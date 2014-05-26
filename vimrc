@@ -293,3 +293,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " === NerdTree ===============================================================
 let NERDTreeIgnore = ['\.pyc$', '\.aux$', '\.blg$', '\.fdb_latexmk$', '\.fls$']
+
+
+" === Misc Hacks ============================================================
+" So that latex-suite always sets 'tex' filetype rather than 'plaintex'
+" sometimes
+let g:tex_flavor='latex'
