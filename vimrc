@@ -277,3 +277,13 @@ let Tlist_Exit_OnlyWindow = 1           " automatically close taglist when we cl
 " LaTeX support! See http://vim-taglist.sourceforge.net/extend.html
 let tlist_tex_settings   = 'latex;s:sections;g:graphics;l:labels;b:bibitem'
 let tlist_make_settings  = 'make;m:makros;t:targets'
+
+" === UtilSnips =============================================================
+" Defaults
+" g:UltiSnipsExpandTrigger               <tab>
+" g:UltiSnipsListSnippets                <c-tab>
+" g:UltiSnipsJumpForwardTrigger          <c-j>
+" g:UltiSnipsJumpBackwardTrigger         <c-k>
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
