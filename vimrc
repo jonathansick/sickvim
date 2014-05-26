@@ -26,17 +26,6 @@ map <leader>td <Plug>TaskList
 " http://support.markedapp.com/kb/how-to-tips-and-tricks/marked-bonus-pack-scripts-commands-and-bundles
 :nnoremap <leader>marked :silent !open -a Marked.app '%:p'<cr>
 
-" run py.test's
-nmap <silent><Leader>tf <Esc>:Pytest file<CR>
-nmap <silent><Leader>tc <Esc>:Pytest class<CR>
-nmap <silent><Leader>tm <Esc>:Pytest method<CR>
-nmap <silent><Leader>tn <Esc>:Pytest next<CR>
-nmap <silent><Leader>tp <Esc>:Pytest previous<CR>
-nmap <silent><Leader>te <Esc>:Pytest error<CR>
-
-" Run django tests
-map <leader>dt :set makeprg=python\ manage.py\ test\|:call MakeGreen()<CR>
-
 " open/close the quickfix window
 nmap <leader>c :copen<CR>
 nmap <leader>cc :cclose<CR>
@@ -165,16 +154,6 @@ set ignorecase              " Default to using case insensitive searches,
 set smartcase               " unless uppercase letters are used in the regex.
 set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
-
-" ==========================================================
-" Python
-" ==========================================================
-let python_highlight_all = 1 " Supposedly better python syntax
-
-"au BufRead *.py compiler nose
-au FileType python set omnifunc=pythoncomplete#Complete
-au BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-
 
 " ==========================================================
 " Javascript
