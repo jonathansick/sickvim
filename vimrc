@@ -317,7 +317,12 @@ autocmd! BufNewFile * call LoadTemplate()
 
 nmap <silent> <leader>s :set spell!<CR>
 set spelllang=en_ca " choose en / en_us / en_ca etc.
-setlocal spellfile=~/.vim/spell/en.utf-8.add
+" Put custom spelling additions on Dropbox if possible
+if filereadable(expand("~/Dropbox/App/vim/en.utf-8.add"))
+    setlocal spellfile="~/Dropbox/App/vim/en.utf-8.add"
+else
+    setlocal spellfile="~/.vim/spell/en.utf-8.add"
+endif
 
 " === Ctags/Taglist
 
