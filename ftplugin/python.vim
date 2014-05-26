@@ -5,4 +5,5 @@
 " E712 - comparisons to True
 " E262 - inline comments have space after hash; but sphinx auto attributes
 "        want a `#:`.
-let g:syntastic_python_checker_args='--ignore=W293,E701,E128,E127,E712,E262'
+" let g:syntastic_python_checker_args='--ignore=W293,E701,E128,E127,E712,E262'
+let g:syntastic_python_checker_args='--ignore=W293,E701,E712,E262'
