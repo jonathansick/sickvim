@@ -7,6 +7,10 @@ set nocompatible              " Don't be compatible with vi
 set hidden                    " Lusty plugin prefers this
 set encoding=utf-8            " Force UTF-8; maybe presumptive?
 
+let mapleader=","             " change the leader to be a comma vs slash
+" Use \ to complement ; for reverse character search
+nnoremap \ ,
+
 " ==========================================================
 " Pathogen - Allows us to organize our vim plugins
 " ==========================================================
@@ -266,7 +270,6 @@ else
 endif
 
 " === Ctags/Taglist
-
 map <leader>tags :TlistToggle<CR>
 let Tlist_Ctags_Cmd="/usr/local/bin/ctags" " use exuberant ctags
 nmap ,tagup :!(cd %:p:h;ctags *)<CR>        " rebuild tag index
