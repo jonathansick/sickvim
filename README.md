@@ -46,21 +46,38 @@ If you're *me*, you can switch it to SSH access by manually calling
 
 If you don't have them, you'll also need to install the dependencies.
 
-1. Flake8 &mdash; `pip install flake8` for syntasic plugin. Another option is `pyflakes`.
-2. Ack &mdash; e.g. `sudo brew install ack` (using [Homebrew][homebrew])
+1. Flake8 &mdash; `pip install flake8` for the syntasic plugin.
+2. Ack &mdash; e.g. `brew install ack` (using [Homebrew][homebrew])
 3. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
 4. tags &mdash; Download from http://ctags.sourceforge.net/
+
+### Setting up MacVim
+
+On a Mac, vim and MacVim.app can be installed and managed with [Homebrew][homebrew].
+
+    brew update
+    brew install macvim --custom-icons
+    brew link macvim
+    brew linkapps
+
+MacVim can be launched on the command-line with `mvim`.
+In my dotfiles I've set `vim` to point to the `vim` inside MacVim.app.
 
 ## Updating this Vim setup
 
 Updating the Vim directory requires two steps. First, pull changes from Github:
 
     git pull origin master
-	git submodule update
+    git submodule update
 
 then update plugins,
 
-	 git submodule foreach git pull origin master
+    git submodule foreach git pull origin master
+	 
+If Command-T was updated, its ruby bindings will need to be recompiled:
+
+    cd ~/.vim/bundle/command-t
+    rake make
 
 If any plug-ins were updated, those can be pushed back to Github
 
@@ -93,6 +110,7 @@ To remove a plugin
 (See [this Stack Overflow answer for removing submodules](http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule).)
 
 [home]: http://www.jonathansick.ca
+[dotfiles]: https://github.com/jonathansick/dotfiles
 [anderson]: http://sontek.net/turning-vim-into-a-modern-python-ide
     "Turning Vim into a Modern Python IDE"
 [submodulevimcast]: http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/
