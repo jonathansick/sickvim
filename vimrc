@@ -292,7 +292,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " === NerdTree ===============================================================
-let NERDTreeIgnore = ['\.pyc$', '\.aux$', '\.blg$', '\.fdb_latexmk$', '\.fls$']
+let NERDTreeIgnore = ['\.pyc$', '\.aux$', '\.blg$', '\.fdb_latexmk$', '\.fls$', '\.upa$', '\.upb']
 
 
 " === Misc Hacks ============================================================
