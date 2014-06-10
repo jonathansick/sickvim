@@ -204,6 +204,7 @@ func WordProcessorMode()
     setlocal spell spelllang=en_ca
     setlocal wrap
     setlocal linebreak
+    setlocal nolist
     setlocal ts=2
     setlocal sts=2
     setlocal sw=2
