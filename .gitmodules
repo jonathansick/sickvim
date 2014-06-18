@@ -30,14 +30,6 @@
 	path = bundle/pydoc
 	url = git://github.com/fs111/pydoc.vim.git
 	ignore = dirty
-[submodule "bundle/py.test"]
-	path = bundle/py.test
-	url = git://github.com/alfredodeza/pytest.vim.git
-	ignore = dirty
-[submodule "bundle/makegreen"]
-	path = bundle/makegreen
-	url = git://github.com/reinh/vim-makegreen
-	ignore = dirty
 [submodule "bundle/tasklist"]
 	path = bundle/tasklist
 	url = git://github.com/vim-scripts/TaskList.vim.git
@@ -45,10 +37,6 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/vim-scripts/The-NERD-tree.git
-	ignore = dirty
-[submodule "bundle/ropevim"]
-	path = bundle/ropevim
-	url = git://github.com/sontek/rope-vim.git
 	ignore = dirty
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
