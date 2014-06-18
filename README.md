@@ -16,14 +16,10 @@ These plugins are currently installed:
 * NERDTree &mdash; file system explorer, like TextMate's drawer
 * Minibufexpl &mdash; Visually display what buffers are currently opened
 * GunDo &mdash; Visual Undo in vim with diff's to check the differences
-* Pytest &mdash; Runs your Python tests in Vim.
-* Command-T &mdash; Allows easy search and opening of files within a given path
-* Snipmate &mdash; Configurable snippets to avoid re-typing common comands
+* Utilsnips &mdash; Configurable snippets to avoid re-typing common comands
 * Fugitive &mdash; Interface with git from vim
 * Git &mdash; Syntax highlighting for git config files
 * Pydoc &mdash; Opens up pydoc within vim
-* Py.test &mdash; Run py.test test's from within vim
-* MakeGreen &mdash; Generic test runner that works with nose
 * [Markdown](https://github.com/tpope/vim-markdown) &mdash; markdown syntax highlighting
 * cython &mdash; pyrex and Cython syntax highlighting
 * latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
@@ -48,7 +44,6 @@ If you don't have them, you'll also need to install the dependencies.
 
 1. Flake8 &mdash; `pip install flake8` for the syntasic plugin.
 2. Ack &mdash; e.g. `brew install ack` (using [Homebrew][homebrew])
-3. Rope &mdash; `sudo easy_install rope; sudo easy_install ropemode`
 4. tags &mdash; Download from http://ctags.sourceforge.net/
 
 ### Setting up MacVim
@@ -74,11 +69,6 @@ then update plugins,
 
     git submodule foreach git pull origin master
 	 
-If Command-T was updated, its ruby bindings will need to be recompiled:
-
-    cd ~/.vim/bundle/command-t
-    rake make
-
 If any plug-ins were updated, those can be pushed back to Github
 
     git commit *bundles* -m "Updated plug-ins"

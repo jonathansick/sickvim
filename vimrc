@@ -140,20 +140,11 @@ imap <C-W> <C-O><C-W>
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
 
-" Run command-t file search
-map <leader>f :CommandT<CR>
 " Ack searching 
 nmap <leader>a <Esc>:Ack! 
 
 " Load the Gundo window
 map <leader>g :GundoToggle<CR>
-
-" Jump to the definition of whatever the cursor is on
-map <leader>j :RopeGotoDefinition<CR>
-
-" Rename whatever the cursor is on (including references to it)
-map <leader>r :RopeRename<CR>
-
 
 " ==========================================================
 " SuperTab - Allows us to get code completion with tab
