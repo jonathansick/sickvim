@@ -21,8 +21,5 @@ ln -Ffs $DOTVIM/vimrc $HOME/.vimrc
 ln -Ffs $DOTVIM/gvimrc $HOME/.gvimrc
 ln -Ffs $DOTVIM/ctags.conf $HOME/.ctags
 
-# Compile Command-t
-(cd $DOTVIM/bundle/command-t; rake make)
-
 # You'll have to do this last step manually
 # cd $DOTVIM/doc/; vim` then run `:helptags .`
