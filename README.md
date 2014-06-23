@@ -1,29 +1,69 @@
-# Jonathan Sick's Vim Configuration
+# sickvim
+
+*Jonathan Sick's Vim Configuration*
 
 My vim configuration is derived from work by [John Anderson][anderson]. As described in [a vimcast][submodulevimcast], plugins are installed as git submodules with [Pathogen][].
 
-## Features
+## Plugins
 
-I use Ethan Schoonover's [Solarized][] colour theme, with low visibility on "invisible" characters.
-
-These plugins are currently installed:
-
-* [commentary](https://github.com/tpope/vim-commentary) &mdash; Comment lines with `\\\` and comment a paragraph with `\\ap`. Notes these are toggles!
-* [repeat](https://github.com/tpope/vim-repeat) &mdash; support the dot command with plugin maps (like in surround.vim and commentary.com).
-* TagList &mdash; list and jump between functions in your source using CTags
-* [Syntastic](https://github.com/scrooloose/syntastic) &mdash; multi-lingual syntax checking.
-* [Surround](https://github.com/tpope/vim-surround) &mdash; Allows you to surround text with open/close tags
-* NERDTree &mdash; file system explorer, like TextMate's drawer
-* Minibufexpl &mdash; Visually display what buffers are currently opened
-* GunDo &mdash; Visual Undo in vim with diff's to check the differences
-* Utilsnips &mdash; Configurable snippets to avoid re-typing common comands
-* Fugitive &mdash; Interface with git from vim
-* Git &mdash; Syntax highlighting for git config files
+* [Solarized][] colour theme from Ethan Schoonover. I use low visibility on "invisible" characters to keep an eye on tabs and carriage returns.
+* [Commentary](https://github.com/tpope/vim-commentary) to toggle comments on source files.
+  - Comment lines with `gcc`. Accepts a count, eg. `2gcc`.
+  - Comment a paragraph with `gcap` (or any motion with `gc`).
+  - `gc` also works in visual mode.
+* [Surround](https://github.com/tpope/vim-surround) — Allows you to surround text with open/close tags. It provides three operations:
+  - `cs` changes surroundings. E.g. `cs"'` to change quotes from `"` to `'`.
+  - `ys` wraps an object in a surrounding. E.g. `ysiw<em>` to wrap a word in <em> tags. Or `yss)` to wrap a line in parentheses.
+  - `ds` deletes the surrounding. E.g. `ds{` to delete the `{` surrounding a word.
+* [repeat](https://github.com/tpope/vim-repeat) — support the dot command with plugin maps (like in surround.vim and commentary.vim).
+* TagList — list and jump between functions in your source using CTags
+  - `,tags` toggles the TagList pane
+* [Syntastic](https://github.com/scrooloose/syntastic) — multi-lingual syntax checking. I use `flake8` to do style on syntax checking on Python code. See `ftplugin/python.vim` for my PEP8 exceptions.
+* [Supertab](https://github.com/ervandew/supertab) to handle completions with a tab. I'm looking to switch to YouCompleteMe for this task, though.
+* [NERDTree](https://github.com/scrooloose/nerdtree) — trusty file system explorer, like TextMate's drawer. Toggle the pane with `,n`.
+* [lusty](https://github.com/sjbach/lusty/) to make it easy to switch between buffers.
+  - `,lj` brings up a list of recent buffers. Press a letter on home row to select that buffer then press they key again to switch to it.
+* [GunDo](http://sjl.bitbucket.org/gundo.vim/) — Visual Undo in vim with diff's to check the differences. See [this vimcast](http://vimcasts.org/episodes/undo-branching-and-gundo-vim/) for more details.
+  - `,g` to load the `gundo` window.
+* [Ultisnips](https://github.com/SirVer/ultisnips) — Configurable snippets to avoid re-typing common code fragments.
+  - For python files:
+    + `mplimp` imports lots of `matplotib modules
+    + `ooplot` roughs out an object-oriented `matplotlib` plot
+    + `docp` adds a numpydoc-style parameter item for the docstring.
+    + `def` and `class` do what you'd expect
+  - For LaTeX files:
+    + `sec` and `eq` do what you'd expect.
+    + **TODO** document more snippets.
+* [Fugitive](https://github.com/tpope/vim-fugitive) — Interface with git from vim.
+* Git &mdash; Syntax highlighting for git config files.
+* [eunuch](https://github.com/tpope/vim-eunuch) &mdash; provides handy syntactic sugar for Unixy stuff in vim. Here's the rundown from Tim Pope's documentation:
+  - `:Unlink`: Delete a buffer and the file on disk simultaneously.
+  - `:Remove`: Like `:Unlink`, but doesn't require a neckbeard.
+  - `:Move`: Rename a buffer and the file on disk simultaneously.
+  - `:Chmod`: Change the permissions of the current file.
+  - `:Mkdir`: Create a directory, defaulting to the parent of the current file.
+  - `:Find`: Run `find` and load the results into the quickfix list.
+  - `:Locate`: Run `locate` and load the results into the quickfix list.
+  - `:Wall`: Write every open window.  Handy for kicking off tools like [guard][].
+  - `:SudoWrite`: Write a privileged file with `sudo`.
+  - `:SudoEdit`: Edit a privileged file with `sudo`.
+  - File type detection for `sudo -e` is based on original file name.
+  - New files created with a shebang line are automatically made executable.
 * Pydoc &mdash; Opens up pydoc within vim
-* [Markdown](https://github.com/tpope/vim-markdown) &mdash; markdown syntax highlighting
-* cython &mdash; pyrex and Cython syntax highlighting
-* latex-box &mdash; a bare-bones LaTeX environment, with latexmk to boot
-* [eunuch](https://github.com/tpope/vim-eunuch) &mdash; provides handy syntactic sugar for Unixy stuff in vim. `:Rename` is handy if you're not working in a git repository.
+* [Markdown](https://github.com/tpope/vim-markdown) &mdash; markdown syntax highlighting.
+* [latex-box](https://github.com/LaTeX-Box-Team/LaTeX-Box) — a bare-bones LaTeX environment, with latexmk to boot.
+
+## Other features/mappings
+
+* Leader is `,`
+* `kj` is equivalent to `<Tab>` for getting into normal mode.
+* `ctrl-j/k/l/m` changes splits in the specific direction.
+* [formd](http://drbunsen.github.io/formd/) to convert between different markdown linking styles.
+  - `,fr` to run `formd -r` and convert links to reference style.
+  - `,fi` to run `formd -i` and convert links to inline style.
+* `:WP` to turn on 'word processing mode.' Bumps font size and line spacing for MacVim, turns on spell checking.
+* `,vimdc` to edit the `.vimrc` file and reload upon save.
+* I make heavy use of `ftplugin` to configure language-specific settings. So check out the `ftplugin/` directory.
 
 ## Installation
 
