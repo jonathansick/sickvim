@@ -13,7 +13,7 @@ My vim configuration is derived from work by [John Anderson][anderson]. As descr
   - `gc` also works in visual mode.
 * [Surround](https://github.com/tpope/vim-surround) — Allows you to surround text with open/close tags. It provides three operations:
   - `cs` changes surroundings. E.g. `cs"'` to change quotes from `"` to `'`.
-  - `ys` wraps an object in a surrounding. E.g. `ysiw<em>` to wrap a word in <em> tags. Or `yss)` to wrap a line in parentheses.
+  - `ys` wraps an object in a surrounding. E.g. `ysiw<em>` to wrap a word in `<em>` tags. Or `yss)` to wrap a line in parentheses.
   - `ds` deletes the surrounding. E.g. `ds{` to delete the `{` surrounding a word.
 * [repeat](https://github.com/tpope/vim-repeat) — support the dot command with plugin maps (like in surround.vim and commentary.vim).
 * TagList — list and jump between functions in your source using CTags
@@ -52,6 +52,9 @@ My vim configuration is derived from work by [John Anderson][anderson]. As descr
 * Pydoc &mdash; Opens up pydoc within vim
 * [Markdown](https://github.com/tpope/vim-markdown) &mdash; markdown syntax highlighting.
 * [latex-box](https://github.com/LaTeX-Box-Team/LaTeX-Box) — a bare-bones LaTeX environment, with latexmk to boot.
+* [Autoformat](https://github.com/Chiel92/vim-autoformat) — to clean up code formatting. Potentially useful when fixing someone else's code, right? I'm not happy with the way to formats Python code, though.
+  - `:Autoformat` to format the entire file
+  - `gq` to format a visual selection.
 
 ## Other features/mappings
 
