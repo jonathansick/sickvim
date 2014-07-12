@@ -34,21 +34,23 @@ snippet docat
 
 # snippets for Matplotlib
 snippet mplimp
-	import matplotlib as mpl
+	# import matplotlib as mpl
 	from matplotlib.figure import Figure
 	from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 	import matplotlib.gridspec as gridspec
 # Generic OO plot using gridspec and tight layout
 snippet ooplot
-	fig = Figure(figsize=(3.5, 3.5))
+	fig = Figure(figsize=(3.5, 3.5), frameon=False)
 	canvas = FigureCanvas(fig)
-	gs = gridspec.GridSpec(1, 1, left=0.15, right=0.95, bottom=0.15, top=0.95,
-	    wspace=None, hspace=None, width_ratios=None, height_ratios=None)
+	gs = gridspec.GridSpec(1, 1,
+	                       left=0.15, right=0.95, bottom=0.15, top=0.95,
+	                       wspace=None, hspace=None,
+	                       width_ratios=None, height_ratios=None)
 	ax = fig.add_subplot(gs[0])
 	pass
 	gs.tight_layout(fig, pad=1.08, h_pad=None, w_pad=None, rect=None)
-	canvas.print_figure(plotPath + ".pdf", format="pdf")
-	canvas.print_figure(plotPath + ".eps", format="eps")
+	canvas.print_figure(plotpath + ".pdf", format="pdf")
+	canvas.print_figure(plotpath + ".eps", format="eps")
 # Hide ticklabels for an axis
 snippet notl
 	for tl in ax.get_xmajorticklabels():
