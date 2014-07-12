@@ -56,6 +56,8 @@ snippet notl
 	for tl in ax.get_xmajorticklabels():
 	    tl.set_visible(False)
 # Make a colour bar with axes_grid; has same length as parent axis
+snippet ticklocator
+	ax.xaxis.set_major_locator(mpl.ticker.MultipleLocator(base=1))
 snippet cbar
 	from mpl_toolkits.axes_grid1 import make_axes_locatable
 	divider = make_axes_locatable(ax)
