@@ -167,7 +167,7 @@ snippet class "class with docstrings" b
 class ${1:MyClass}(${2:object}):
 	`!p snip.rv = triple_quotes(snip)`${3:Docstring for $1. }`!p snip.rv = triple_quotes(snip)`
 	def __init__(self$4):
-		super($1, self).__init__(self)
+		super($1, self).__init__()
 		$0
 endsnippet
 
