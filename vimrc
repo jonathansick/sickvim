@@ -291,3 +291,11 @@ let NERDTreeIgnore = ['\.pyc$', '\.aux$', '\.blg$', '\.fdb_latexmk$', '\.fls$', 
 " So that latex-suite always sets 'tex' filetype rather than 'plaintex'
 " sometimes
 let g:tex_flavor='latex'
+
+" === VimRoom
+" https://github.com/mikewest/vimroom/issues/7
+if has('gui_running')
+    let g:vimroom_guibackground = '#fdf6e4'
+else
+    let g:vimroom_ctermbackground = 8
+endif
