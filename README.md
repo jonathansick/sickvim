@@ -55,6 +55,7 @@ My vim configuration is derived from work by [John Anderson][anderson]. As descr
 * [Autoformat](https://github.com/Chiel92/vim-autoformat) — to clean up code formatting. Potentially useful when fixing someone else's code, right? I'm not happy with the way to formats Python code, though.
   - `:Autoformat` to format the entire file
   - `gq` to format a visual selection.
+* [VimRoom](https://mikewest.github.io/vimroom/) — setup a clean writing layout with short line lengths. Enable with `<leader>V`. Pairs well with the `:WP` mode.
 
 ## Other features/mappings
 
