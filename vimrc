@@ -208,6 +208,8 @@ func WordProcessorMode()
     setlocal linespace=4
     highlight Cursor guifg=#002B36 guibg=#268DB2
     highlight iCursor guifg=#268DB2 guibg=#002B36
+    " disable syntastic error checking
+    SyntasticToggleMode
 endfu
 com! WP call WordProcessorMode()
 
