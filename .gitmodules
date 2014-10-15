@@ -74,3 +74,7 @@
 	path = bundle/autoformat
 	url = https://github.com/Chiel92/vim-autoformat.git
 	ignore = dirty
+[submodule "bundle/vimroom"]
+	path = bundle/vimroom
+	url = https://github.com/mikewest/vimroom.git
+	ignore = dirty
