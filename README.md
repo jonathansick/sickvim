@@ -65,7 +65,7 @@ My vim configuration is derived from work by [John Anderson][anderson]. As descr
 * [formd](http://drbunsen.github.io/formd/) to convert between different markdown linking styles.
   - `,fr` to run `formd -r` and convert links to reference style.
   - `,fi` to run `formd -i` and convert links to inline style.
-* `:WP` to turn on 'word processing mode.' Bumps font size and line spacing for MacVim, turns on spell checking.
+* `:WP` to turn on 'word processing mode.' Bumps font size and line spacing for MacVim, turns on spell checking. Use `:SyntasticToggleMode` to turn off syntastic flags. Of course, works well with `<leader>V` for WriteRoom mode.
 * `,vimdc` to edit the `.vimrc` file and reload upon save.
 * I make heavy use of `ftplugin` to configure language-specific settings. So check out the `ftplugin/` directory.
 
