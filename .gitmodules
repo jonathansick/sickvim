@@ -78,3 +78,7 @@
 	path = bundle/vimroom
 	url = https://github.com/mikewest/vimroom.git
 	ignore = dirty
+[submodule "bundle/obsession"]
+	path = bundle/obsession
+	url = git@github.com:tpope/vim-obsession.git
+	ignore = dirty

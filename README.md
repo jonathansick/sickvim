@@ -18,6 +18,7 @@ My vim configuration is derived from work by [John Anderson][anderson]. As descr
 * [repeat](https://github.com/tpope/vim-repeat) — support the dot command with plugin maps (like in surround.vim and commentary.vim).
 * TagList — list and jump between functions in your source using CTags
   - `,tags` toggles the TagList pane
+* [Obsession](https://github.com/tpope/vim-obsession) — session persistence. Works great with the [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum) plugin.
 * [Syntastic](https://github.com/scrooloose/syntastic) — multi-lingual syntax checking. I use `flake8` to do style on syntax checking on Python code. See `ftplugin/python.vim` for my PEP8 exceptions.
 * [Supertab](https://github.com/ervandew/supertab) to handle completions with a tab. I'm looking to switch to YouCompleteMe for this task, though.
 * [NERDTree](https://github.com/scrooloose/nerdtree) — trusty file system explorer, like TextMate's drawer. Toggle the pane with `,n`.
