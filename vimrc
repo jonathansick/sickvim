@@ -33,7 +33,7 @@ set wildmode=full             " <Tab> cycles between all matching choices.
 
 " Ignore these files when completing
 set wildignore+=*.o,*.obj,.git,*.pyc 
-set grepprg=ack-grep          " replace the default grep program with ack
+" set grepprg=ack-grep          " replace the default grep program with ack
 
 " Auto change the directory to the current file I'm working on
 "autocmd BufEnter * lcd %:p:h
@@ -296,6 +296,7 @@ let g:tex_flavor='latex'
 
 " === VimRoom
 " https://github.com/mikewest/vimroom/issues/7
+let g:vimroom_sidebar_height = 0
 if has('gui_running')
     let g:vimroom_guibackground = '#fdf6e4'
 else
