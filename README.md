@@ -145,6 +145,8 @@ To remove a plugin
 
 (See [this Stack Overflow answer for removing submodules](http://stackoverflow.com/questions/1260748/how-do-i-remove-a-git-submodule).)
 
+**Note:** in the future it will be possible to simply do `git rm bundle/plugin_name` with new-style (`gitfile`-based submodules).
+
 [home]: http://www.jonathansick.ca
 [dotfiles]: https://github.com/jonathansick/dotfiles
 [anderson]: http://sontek.net/turning-vim-into-a-modern-python-ide
