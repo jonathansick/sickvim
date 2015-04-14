@@ -57,6 +57,7 @@ My vim configuration is derived from work by [John Anderson][anderson]. As descr
   - `:Autoformat` to format the entire file
   - `gq` to format a visual selection.
 * [VimRoom](https://mikewest.github.io/vimroom/) — setup a clean writing layout with short line lengths. Enable with `<leader>V`. Pairs well with the `:WP` mode.
+* [toml](https://github.com/avakar/pytoml) for formatting [TOML](https://github.com/toml-lang/toml) files.
 
 ## Other features/mappings
 

@@ -82,3 +82,7 @@
 	path = bundle/obsession
 	url = git@github.com:tpope/vim-obsession.git
 	ignore = dirty
+[submodule "bundle/toml"]
+	path = bundle/toml
+	url = git@github.com:cespare/vim-toml.git
+	ignore = dirty
