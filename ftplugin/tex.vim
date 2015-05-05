@@ -1,5 +1,11 @@
-setlocal wrap linebreak nolist
+setlocal wrap
+setlocal linebreak
+setlocal nolist
 setlocal spell
+setlocal ts=2
+setlocal sts=2
+setlocal sw=2
+setlocal colorcolumn=
 
 " Personal configurations for latex-suite, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/customizing-latex-suite.html
