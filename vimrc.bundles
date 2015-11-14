@@ -1,0 +1,31 @@
+" ==========================================================
+" vim-plug: dynamically manage plugins from git
+" https://github.com/junegunn/vim-plug
+" By default, these plugins follow master branches on GitHub
+" ==========================================================
+call plug#begin('~/.vim/plugged')
+
+Plug 'altercation/vim-colors-solarized'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-scripts/taglist.vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-obsession'
+Plug 'sjbach/lusty'
+Plug 'SirVer/ultisnips'
+Plug 'mikewest/vimroom'
+Plug 'cespare/vim-toml'
+Plug 'LaTeX-Box-Team/LaTeX-Box'
+Plug 'sjl/gundo.vim'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+
+if filereadable(expand("~/.vimrc.bundles.local"))
+    source ~/.vimrc.bundles.local
+endif
+
+call plug#end()

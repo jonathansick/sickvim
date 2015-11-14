@@ -12,12 +12,11 @@ let mapleader=","             " change the leader to be a comma vs slash
 nnoremap \ ,
 
 " ==========================================================
-" Pathogen - Allows us to organize our vim plugins
+" vim-plug
 " ==========================================================
-" Load pathogen with docs for all plugins
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+if filereadable(expand("~/.vimrc.bundles"))
+      source ~/.vimrc.bundles
+  endif
 
 " ==========================================================
 " Basic Settings 
@@ -117,9 +116,6 @@ set incsearch               " Incrementally search while typing a /regex
 " Seriously guys. It's not like :W is bound to anything anyway.
 command! W :w
 
-" Toggle the tasklist
-map <leader>td <Plug>TaskList
-
 " open/close the quickfix window
 nmap <leader>c :copen<CR>
 nmap <leader>cc :cclose<CR>
@@ -140,34 +136,8 @@ imap <C-W> <C-O><C-W>
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
 
-" Ack searching 
-nmap <leader>a <Esc>:Ack! 
-
 " Load the Gundo window
 map <leader>g :GundoToggle<CR>
-
-" ==========================================================
-" SuperTab - Allows us to get code completion with tab
-" ==========================================================
-" Try different completion methods depending on its context
-let g:SuperTabDefaultCompletionType = "context"
-
-" Add the virtualenv's site-packages to vim path
-" py << EOF
-" import os.path
-" import sys
-" import vim
-" if 'VIRTUALENV' in os.environ:
-"     project_base_dir = os.environ['VIRTUAL_ENV']
-"     sys.path.insert(0, project_base_dir)
-"     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"     execfile(activate_this, dict(__file__=activate_this))
-" EOF
-" 
-" " Load up virtualenv's vimrc if it exists
-" if filereadable($VIRTUAL_ENV . '/.vimrc')
-"     source $VIRTUAL_ENV/.vimrc
-" endif
 
 " Mac-like shift+movement selection
 if has("gui_macvim")
