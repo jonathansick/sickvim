@@ -7,6 +7,12 @@ setlocal sts=2
 setlocal sw=2
 setlocal colorcolumn=
 
+" Disable autoindent
+setlocal noautoindent
+setlocal nocindent
+setlocal nosmartindent
+setlocal indentexpr=
+
 " Personal configurations for latex-suite, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/customizing-latex-suite.html
 "
