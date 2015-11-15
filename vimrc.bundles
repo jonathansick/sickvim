@@ -23,11 +23,12 @@ Plug 'cespare/vim-toml'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'sjl/gundo.vim'
 
-" For OS-specific dotfiles
+" plugins specific to an rcm tag for a platform; e.g. mac
 if filereadable(expand("~/.vimrc.bundles.arch"))
     source ~/.vimrc.bundles.arch
 endif
 
+" vimrc extensions specific to this user account
 if filereadable(expand("~/.vimrc.bundles.local"))
     source ~/.vimrc.bundles.local
 endif

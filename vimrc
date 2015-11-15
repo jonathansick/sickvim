@@ -267,3 +267,17 @@ if has('gui_running')
 else
     let g:vimroom_ctermbackground = 8
 endif
+
+" ==========================================================
+" local vimrc extensions
+" ==========================================================
+
+" vimrc extensions specific to an rcm tag for a platform; e.g. mac
+if filereadable(expand("~/.vimrc.arch"))
+    source ~/.vimrc.bundles.arch
+endif
+
+" vimrc extensions specific to this user account
+if filereadable(expand("~/.vimrc.local"))
+    source ~/.vimrc.local
+endif
