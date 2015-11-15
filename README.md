@@ -48,7 +48,7 @@ Clone this repository and install the dotfiles:
 ```bash
 git clone https://github.com/jonathansick/sickvim.git ~/sickvim
 cd ~/sickvim
-rcup -d ~/sickvim
+rcup -d ~/sickvim -x "README* LICENSE*"
 ```
 
 Note that my normal workflow is to combine several rcm-manage dotfiles repositories and possibly use tags.
@@ -58,9 +58,20 @@ For instance,
 rcup -t mac -d ~/secret-dotfiles -d ~/sickvim -d ~/sickconfig
 ```
 
+## Install Plugins
+
+Plugins are managed with [vim-plug]().
+Plugins are listed in vimrc.bundles.\* (including architecture-specific plugins sequestered in tag directories).
+
+Once the sickvim dotfiles are installed with `rcup`, you can install the plugins via
+
+```bash
+vim +PlugInstall +qall
+```
+
 ## Plugins
 
-* [Solarized][] colour theme from Ethan Schoonover. I use low visibility on "invisible" characters to keep an eye on tabs and carriage returns.
+* [Solarized](https://github.com/altercation/vim-colors-solarized) colour theme from Ethan Schoonover. I use low visibility on "invisible" characters to keep an eye on tabs and carriage returns.
 * [Commentary](https://github.com/tpope/vim-commentary) to toggle comments on source files.
   - Comment lines with `gcc`. Accepts a count, eg. `2gcc`.
   - Comment a paragraph with `gcap` (or any motion with `gc`).
@@ -74,7 +85,6 @@ rcup -t mac -d ~/secret-dotfiles -d ~/sickvim -d ~/sickconfig
   - `,tags` toggles the TagList pane
 * [Obsession](https://github.com/tpope/vim-obsession) — session persistence. Works great with the [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum) plugin.
 * [Syntastic](https://github.com/scrooloose/syntastic) — multi-lingual syntax checking. I use `flake8` to do style on syntax checking on Python code. See `ftplugin/python.vim` for my PEP8 exceptions.
-* [Supertab](https://github.com/ervandew/supertab) to handle completions with a tab. I'm looking to switch to YouCompleteMe for this task, though.
 * [NERDTree](https://github.com/scrooloose/nerdtree) — trusty file system explorer, like TextMate's drawer. Toggle the pane with `,n`.
 * [lusty](https://github.com/sjbach/lusty/) to make it easy to switch between buffers.
   - `,lj` brings up a list of recent buffers. Press a letter on home row to select that buffer then press they key again to switch to it.
@@ -90,7 +100,7 @@ rcup -t mac -d ~/secret-dotfiles -d ~/sickvim -d ~/sickconfig
     + `sec` and `eq` do what you'd expect.
     + **TODO** document more snippets.
 * [Fugitive](https://github.com/tpope/vim-fugitive) — Interface with git from vim.
-* Git &mdash; Syntax highlighting for git config files.
+* Git — Syntax highlighting for git config files.
 * [eunuch](https://github.com/tpope/vim-eunuch) &mdash; provides handy syntactic sugar for Unixy stuff in vim. Here's the rundown from Tim Pope's documentation:
   - `:Unlink`: Delete a buffer and the file on disk simultaneously.
   - `:Remove`: Like `:Unlink`, but doesn't require a neckbeard.
@@ -104,14 +114,10 @@ rcup -t mac -d ~/secret-dotfiles -d ~/sickvim -d ~/sickconfig
   - `:SudoEdit`: Edit a privileged file with `sudo`.
   - File type detection for `sudo -e` is based on original file name.
   - New files created with a shebang line are automatically made executable.
-* Pydoc &mdash; Opens up pydoc within vim
 * [Markdown](https://github.com/tpope/vim-markdown) &mdash; markdown syntax highlighting.
 * [latex-box](https://github.com/LaTeX-Box-Team/LaTeX-Box) — a bare-bones LaTeX environment, with latexmk to boot.
-* [Autoformat](https://github.com/Chiel92/vim-autoformat) — to clean up code formatting. Potentially useful when fixing someone else's code, right? I'm not happy with the way to formats Python code, though.
-  - `:Autoformat` to format the entire file
-  - `gq` to format a visual selection.
 * [VimRoom](https://mikewest.github.io/vimroom/) — setup a clean writing layout with short line lengths. Enable with `<leader>V`. Pairs well with the `:WP` mode.
-* [toml](https://github.com/avakar/pytoml) for formatting [TOML](https://github.com/toml-lang/toml) files.
+* [toml](https://github.com/cespare/vim-toml) for formatting [TOML](https://github.com/toml-lang/toml) files.
 
 ## Other features/mappings
 
