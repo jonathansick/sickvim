@@ -22,7 +22,11 @@ Plug 'mikewest/vimroom'
 Plug 'cespare/vim-toml'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'sjl/gundo.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
+
+" For OS-specific dotfiles
+if filereadable(expand("~/.vimrc.bundles.arch"))
+    source ~/.vimrc.bundles.arch
+endif
 
 if filereadable(expand("~/.vimrc.bundles.local"))
     source ~/.vimrc.bundles.local
