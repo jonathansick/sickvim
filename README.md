@@ -2,7 +2,7 @@
 
 ### Dependencies
 
-I use [rcm](https://github.com/thoughtbot/dotfiles) to manage dotfiles.
+I use [rcm](https://github.com/thoughtbot/rcm) to manage dotfiles.
 On a Mac with Homebrew, its easy to install:
 
 ```bash
@@ -10,9 +10,9 @@ brew tap thoughtbot/formulae
 brew install rcm
 ```
 
-(Linux platforms [are also supported](https://github.com/thoughtbot/dotfiles#install))
+(Linux platforms [are also supported](https://github.com/thoughtbot/rcm#installation))
 
-Other dependencies are:
+Other dependencies:
 
 ```bash
 brew install tags   # http://ctags.sourceforge.net/
@@ -47,12 +47,11 @@ Clone this repository and install the dotfiles:
 
 ```bash
 git clone https://github.com/jonathansick/sickvim.git ~/sickvim
-cd ~/sickvim
 rcup -d ~/sickvim -x "README* LICENSE*"
 ```
 
-Note that my normal workflow is to combine several rcm-manage dotfiles repositories and possibly use tags.
-For instance,
+Note that my normal workflow is to combine several rcm-managed dotfiles repositories and possibly use tags to customize the dotfile environment to a particular machine.
+For instance, a personal Mac setup looks like this:
 
 ```bash
 rcup -t mac -d ~/secret-dotfiles -d ~/sickvim -d ~/sickconfig
@@ -60,7 +59,7 @@ rcup -t mac -d ~/secret-dotfiles -d ~/sickvim -d ~/sickconfig
 
 ## Install Plugins
 
-Plugins are managed with [vim-plug]().
+Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug).
 Plugins are listed in vimrc.bundles.\* (including architecture-specific plugins sequestered in tag directories).
 
 Once the sickvim dotfiles are installed with `rcup`, you can install the plugins via
