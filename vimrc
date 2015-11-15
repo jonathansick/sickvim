@@ -252,6 +252,7 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " === NerdTree ===============================================================
 let NERDTreeIgnore = ['\.pyc$', '\.aux$', '\.blg$', '\.fdb_latexmk$', '\.fls$', '\.upa$', '\.upb', '\.cb', '\.cb2', '\.lof', '\.toc', '\.lot']
+nmap <leader>tree :NERDTreeToggle<CR>
 
 
 " === Misc Hacks ============================================================
