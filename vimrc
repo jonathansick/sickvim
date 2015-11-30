@@ -285,6 +285,33 @@ let g:pencil#autoformat = 1
 " Disable syntax concealing
 " let g:pencil#conceallevel = 0
 
+" === Goyo + limelight writing mode ==========================================
+" https://github.com/junegunn/goyo.vim
+" https://github.com/junegunn/limelight.vim
+" The colors from from solarizedlight
+let g:limelight_conceal_ctermfg = 241
+let g:limelight_conceal_guifg = '#eee8d5'
+let g:limelight_default_coefficient = 0.3
+
+" function! s:goyo_enter()
+"   " silent !tmux set status off
+"   " set noshowmode
+"   " set noshowcmd
+"   " set scrolloff=999
+"   Limelight
+" endfunction
+
+" function! s:goyo_leave()
+"   " silent !tmux set status on
+"   " set showmode
+"   " set showcmd
+"   " set scrolloff=5
+"   Limelight!
+" endfunction
+
+" autocmd! User GoyoEnter nested call <SID>goyo_enter()
+" autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 " ==========================================================
 " local vimrc extensions
 " ==========================================================
