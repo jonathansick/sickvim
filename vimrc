@@ -289,28 +289,34 @@ let g:pencil#autoformat = 1
 " https://github.com/junegunn/goyo.vim
 " https://github.com/junegunn/limelight.vim
 " The colors from from solarizedlight
-let g:limelight_conceal_ctermfg = 241
-let g:limelight_conceal_guifg = '#eee8d5'
-let g:limelight_default_coefficient = 0.3
+" http://ethanschoonover.com/solarized
+" I need to manually set the concealed text foreground color since Solarized
+" messes with color palettes to customize the 256 color palette
+let g:limelight_conceal_ctermfg = 245  " Solarized Base1
+let g:limelight_conceal_guifg = '#8a8a8a'  " Solarized Base1
+" let g:limelight_conceal_ctermfg = 254  " Solarized Base2
+" let g:limelight_conceal_guifg = '#eee8d5'  " Solarized Base2
 
-" function! s:goyo_enter()
-"   " silent !tmux set status off
-"   " set noshowmode
-"   " set noshowcmd
-"   " set scrolloff=999
-"   Limelight
-" endfunction
+function! s:goyo_enter()
+  " Changes when starting Goyo
+  " silent !tmux set status off
+  " set noshowmode
+  " set noshowcmd
+  " set scrolloff=999
+  Limelight
+endfunction
 
-" function! s:goyo_leave()
-"   " silent !tmux set status on
-"   " set showmode
-"   " set showcmd
-"   " set scrolloff=5
-"   Limelight!
-" endfunction
+function! s:goyo_leave()
+  " Restore environment when leaving Goyo
+  " silent !tmux set status on
+  " set showmode
+  " set showcmd
+  " set scrolloff=5
+  Limelight!
+endfunction
 
-" autocmd! User GoyoEnter nested call <SID>goyo_enter()
-" autocmd! User GoyoLeave nested call <SID>goyo_leave()
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " ==========================================================
 " local vimrc extensions
