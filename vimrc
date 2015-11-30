@@ -269,6 +269,22 @@ else
     let g:vimroom_ctermbackground = 8
 endif
 
+" === vim-pencil =============================================================
+" Awesome prose writing mode for vim
+" https://github.com/reedes/vim-pencil
+" See after/ftplugin files to enabling pencil for specific syntaxes
+"
+" By default, use softwrapping. It will still autodetect and use hardwrap
+" Use :HardPencil to force hard wrapping
+let g:pencil#wrapModeDefault = 'soft'
+
+" In hard-wrap mode, autoformat by default unless syntax element is excluded
+" Toggle via :PFormatToggle
+let g:pencil#autoformat = 1
+
+" Disable syntax concealing
+" let g:pencil#conceallevel = 0
+
 " ==========================================================
 " local vimrc extensions
 " ==========================================================

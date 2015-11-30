@@ -1,4 +1,5 @@
 setlocal wrap linebreak nolist
+call pencil#init()
 setlocal spell
 
 " Compile markdown into Marked

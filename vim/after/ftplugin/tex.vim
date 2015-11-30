@@ -13,6 +13,8 @@ setlocal nocindent
 setlocal nosmartindent
 setlocal indentexpr=
 
+call pencil#init()
+
 " Personal configurations for latex-suite, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/customizing-latex-suite.html
 "
