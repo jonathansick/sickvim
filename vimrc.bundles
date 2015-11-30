@@ -22,6 +22,7 @@ Plug 'mikewest/vimroom'
 Plug 'cespare/vim-toml'
 Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'sjl/gundo.vim'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 " plugins specific to an rcm tag for a platform; e.g. mac
 if filereadable(expand("~/.vimrc.bundles.arch"))
