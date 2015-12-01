@@ -24,6 +24,7 @@ Plug 'LaTeX-Box-Team/LaTeX-Box'
 Plug 'sjl/gundo.vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 Plug 'reedes/vim-pencil'
+Plug 'reedes/vim-wordy'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
