@@ -303,6 +303,8 @@ function! s:goyo_enter()
   " set noshowmode
   " set noshowcmd
   " set scrolloff=999
+  " FDF6E3
+  " highlight NonText guifg=#FDF6E3 guibg=#FDF6E3
   Limelight
 endfunction
 
