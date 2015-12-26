@@ -15,6 +15,9 @@ setlocal indentexpr=
 
 call pencil#init()
 
+" Don't try to render latex with unicode
+setlocal conceallevel=0
+
 " Personal configurations for latex-suite, see
 " http://vim-latex.sourceforge.net/documentation/latex-suite/customizing-latex-suite.html
 "
