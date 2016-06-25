@@ -26,6 +26,14 @@ Assuming that [pipsi](https://github.com/mitsuhiko/pipsi) is installed:
 pipsi install flake8
 ```
 
+For [linting ES6/JSX in Syntastic](https://jaxbot.me/articles/setting-up-vim-for-react-js-jsx-02-03-2015):
+
+```bash
+npm install -g eslint
+npm install -g babel-eslint
+npm install -g eslint-plugin-react
+```
+
 
 ### Setting up MacVim
 
