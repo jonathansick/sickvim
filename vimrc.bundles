@@ -29,6 +29,8 @@ Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 
 " plugins specific to an rcm tag for a platform; e.g. mac
 if filereadable(expand("~/.vimrc.bundles.arch"))
