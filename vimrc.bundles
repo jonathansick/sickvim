@@ -32,6 +32,7 @@ Plug 'ervandew/supertab'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'justinj/vim-react-snippets'
+Plug 'vim-scripts/SWIG-syntax'
 
 " plugins specific to an rcm tag for a platform; e.g. mac
 if filereadable(expand("~/.vimrc.bundles.arch"))
