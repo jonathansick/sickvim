@@ -15,7 +15,7 @@ brew install rcm
 Other dependencies:
 
 ```bash
-brew install tags   # http://ctags.sourceforge.net/
+brew install ctags   # http://ctags.sourceforge.net/
 brew install ack
 ```
 
