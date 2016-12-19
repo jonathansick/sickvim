@@ -34,20 +34,23 @@ npm install -g babel-eslint
 npm install -g eslint-plugin-react
 ```
 
+### Setting up MacVim and vim
 
-### Setting up MacVim
-
-On a Mac, vim and MacVim.app can be installed and managed with [Homebrew][homebrew].
+It's best to build vim to link properly to a Homebrew installed python and ruby:
 
 ```bash
-brew update
-brew install macvim --custom-icons
+brew install vim
+```
+
+You can also build and install MacVim, the macOS vim GUI:
+
+```bash
+brew install macvim
 brew link macvim
 brew linkapps
 ```
 
 MacVim can be launched on the command-line with `mvim`.
-In my dotfiles I've set `vim` to point to the `vim` inside MacVim.app.
 
 ## Installation with rcm
 
@@ -70,7 +73,8 @@ rcup -t mac -d ~/secret-dotfiles -d ~/sickvim -d ~/sickconfig
 Plugins are managed with [vim-plug](https://github.com/junegunn/vim-plug).
 Plugins are listed in vimrc.bundles.\* (including architecture-specific plugins sequestered in tag directories).
 
-Once the sickvim dotfiles are installed with `rcup`, you can install the plugins via
+Plugins are installed via a `rcup` post-install hook (see `hooks/post-up`).
+Plugins can be manually installed with:
 
 ```bash
 vim +PlugInstall +qall
