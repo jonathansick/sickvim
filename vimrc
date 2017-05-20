@@ -29,9 +29,10 @@ set numberwidth=1             " using only 1 column (and 1 space) while possible
 set title                     " show title in console title bar
 set wildmenu                  " Menu completion in command mode on <Tab>
 set wildmode=full             " <Tab> cycles between all matching choices.
+set path+=** " :find will now do recursive fuzzy file finding
 
 " Ignore these files when completing
-set wildignore+=*.o,*.obj,.git,*.pyc 
+set wildignore+=*.o,*.obj,.git,*.pyc,*.aux
 " set grepprg=ack-grep          " replace the default grep program with ack
 
 " Auto change the directory to the current file I'm working on
