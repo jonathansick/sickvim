@@ -38,7 +38,8 @@ let g:Tex_FormatDependency_ps  = 'dvi,ps'
 let g:Tex_FormatDependency_pspdf = 'dvi,ps,pspdf'
 let g:Tex_FormatDependency_dvipdf = 'dvi,dvipdf'
 
-" setlocal foldmethod=syntax
+" disable folding for speed
+let g:tex_fold_enabled=0
  
 " let g:Tex_IgnoredWarnings ='
 "       \"Underfull\n".
