@@ -340,7 +340,7 @@ let g:jsx_ext_required = 0
 
 " vimrc extensions specific to an rcm tag for a platform; e.g. mac
 if filereadable(expand("~/.vimrc.arch"))
-    source ~/.vimrc.bundles.arch
+    source ~/.vimrc.arch
 endif
 
 " vimrc extensions specific to this user account
