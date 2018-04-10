@@ -2,8 +2,6 @@ let python_highlight_all = 1 " Supposedly better python syntax
 
 setlocal tabstop=4
 
-setlocal omnifunc=pythoncomplete#Complete
-
 " Error formats
 setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 

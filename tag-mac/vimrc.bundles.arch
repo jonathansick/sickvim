@@ -1,4 +1,3 @@
 " Bundles that are only installed with the 'mac' rcm tag
 
-" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer' }
-Plug 'davidhalter/jedi-vim', { 'do': 'git submodule update --init' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --go-completer --js-completer' }
