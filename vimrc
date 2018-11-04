@@ -66,7 +66,7 @@ set softtabstop=4           " <BS> over an autoindent deletes both spaces.
 set expandtab               " Use spaces, not tabs, for autoindent/tab key.
 set shiftround              " rounds indent to a multiple of shiftwidth
 set matchpairs+=<:>         " show matching <> (html mainly) as well
-set foldmethod=indent       " allow us to fold on indents
+set foldmethod=marker       " just fold with markers (efficient)
 set foldlevel=99            " don't fold by default
 
 " close preview window automatically when we move around
