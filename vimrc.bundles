@@ -35,6 +35,9 @@ Plug 'mxw/vim-jsx'
 Plug 'justinj/vim-react-snippets'
 Plug 'vim-scripts/SWIG-syntax'
 
+" PlugInstall and PlugUpdate will clone fzf in ~/.fzf and run install script
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
 " plugins specific to an rcm tag for a platform; e.g. mac
 if filereadable(expand("~/.vimrc.bundles.arch"))
     source ~/.vimrc.bundles.arch
