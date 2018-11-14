@@ -1,4 +1,4 @@
-setlocal wrap linebreak nolist
+setlocal wrap linebreak
 call pencil#init()
 setlocal spell
 
