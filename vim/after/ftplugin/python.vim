@@ -5,4 +5,5 @@ setlocal tabstop=4
 " Error formats
 setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
-let g:syntastic_python_checkers = ['flake8']
+" Enable flake8 linting with Ale
+let b:ale_linters = ['flake8']

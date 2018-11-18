@@ -342,6 +342,13 @@ nnoremap <C-p> :<C-u>FZF<CR>
 autocmd BufWritePre *.js,*.jsx,*.scss,*.css Neoformat
 
 " ==========================================================
+" Configure ale (linting)
+" ==========================================================
+" Only run linters named in ale_linters settings.
+" Linters are defined in the after/ftplugin/ files of each language
+let g:ale_linters_explicit = 1
+
+" ==========================================================
 " local vimrc extensions
 " ==========================================================
 
