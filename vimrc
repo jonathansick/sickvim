@@ -347,6 +347,9 @@ autocmd BufWritePre *.js,*.jsx,*.scss,*.css Neoformat
 " Only run linters named in ale_linters settings.
 " Linters are defined in the after/ftplugin/ files of each language
 let g:ale_linters_explicit = 1
+" Have fun with symbols
+let g:ale_sign_error = '🚫'
+let g:ale_sign_warning = '⚠️'
 
 " ==========================================================
 " local vimrc extensions
