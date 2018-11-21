@@ -339,7 +339,7 @@ nnoremap <C-p> :<C-u>FZF<CR>
 " ==========================================================
 " Configure neoformat (prettier, etc)
 " ==========================================================
-autocmd BufWritePre *.js,*.jsx,*.scss,*.css Neoformat
+autocmd BufWritePre *.js,*.jsx,*.scss,*.css,*.graphql,*.prisma Neoformat
 
 " ==========================================================
 " Configure ale (linting)
@@ -350,6 +350,13 @@ let g:ale_linters_explicit = 1
 " Have fun with symbols
 let g:ale_sign_error = '🚫'
 let g:ale_sign_warning = '⚠️'
+
+" ==========================================================
+" GraphQL
+" ==========================================================
+augroup filetypedetect
+    autocmd BufNew,BufNewFile,BufRead *.prisma :setfiletype graphql
+augroup END
 
 " ==========================================================
 " local vimrc extensions
