@@ -1,4 +1,4 @@
-setlocal wrap linebreak
+setlocal wrap linebreak list
 setlocal breakindent  " smart wrap
 call pencil#init()
 setlocal ts=3
