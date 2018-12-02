@@ -250,6 +250,7 @@ let g:UltiSnipsJumpBackwardTrigger="<C-k>"
 
 " === NerdTree ===============================================================
 let NERDTreeIgnore = ['\.pyc$', '\.aux$', '\.blg$', '\.fdb_latexmk$', '\.fls$', '\.upa$', '\.upb', '\.cb', '\.cb2', '\.lof', '\.toc', '\.lot']
+let NERDTreeShowHidden=1
 nmap <leader>tree :NERDTreeToggle<CR>
 
 
