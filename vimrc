@@ -349,8 +349,8 @@ autocmd BufWritePre *.js,*.jsx,*.scss,*.css,*.graphql,*.prisma Neoformat
 " Linters are defined in the after/ftplugin/ files of each language
 let g:ale_linters_explicit = 1
 " Have fun with symbols
-let g:ale_sign_error = '🚫'
-let g:ale_sign_warning = '⚠️'
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '#'
 " Always keep sign column open to avoid redraw bugs
 let g:ale_sign_column_always = 1
 
