@@ -140,6 +140,9 @@ map <leader>n :NERDTreeToggle<CR>
 " Load the Gundo window
 map <leader>g :GundoToggle<CR>
 
+" Redraw windows
+map <leader>r :redraw!<CR>
+
 " Mac-like shift+movement selection
 if has("gui_macvim")
 	let macvim_hig_shift_movement = 1
