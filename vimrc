@@ -339,6 +339,7 @@ let g:jsx_ext_required = 0
 " Configure fzf
 " ==========================================================
 nnoremap <C-p> :<C-u>FZF<CR>
+" call fzf#run({'source': 'git ls-files', 'sink': 'e'})
 
 " ==========================================================
 " Configure neoformat (prettier, etc)
